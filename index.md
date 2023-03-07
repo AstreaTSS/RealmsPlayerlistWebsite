@@ -110,22 +110,19 @@ If you wish to add this bot, just [use the Server Setup Guide on how to do so](h
 
 There's a whole section in the wiki about this! [Check it out here](https://github.com/AstreaTSS/RealmsPlayerlistBot/wiki/FAQ).
 
-```{eval-rst}
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-   :caption: Wiki:
+```{toctree}
+:hidden:
+:caption: Wiki
 
-   wiki/server_setup
-   wiki/premium
-   wiki/faq
-   
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-   :caption: Legal:
+wiki/server_setup
+wiki/premium
+wiki/faq
+```
 
-   legal/tos
-   legal/privacy_policy
-   
+```{toctree}
+:hidden:
+:caption: Legal
+
+legal/tos
+legal/privacy_policy
 ```
