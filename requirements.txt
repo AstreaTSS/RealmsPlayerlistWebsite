@@ -1,1 +1,7 @@
-nicegui==1.1.3
+wheel
+Sphinx
+sphinx_immaterial
+sphinx-copybutton
+sphinx-hoverxref
+sphinxext-opengraph
+myst-parser
