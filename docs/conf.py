@@ -21,20 +21,32 @@ extensions = [
     "sphinxext.opengraph",
     "myst_parser",
 ]
+myst_enable_extensions = ["linkify"]
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "env"]
 
+# opengraph data
+ogp_site_url = "http://rpl.astrea.cc/"
+ogp_social_cards = {
+    "enable": True,
+    "site_url": "rpl.astrea.cc",
+    "image": "_static/rpl_icon.png",
+    "line_color": "#8ac249",
+}
+ogp_enable_meta_description = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "sphinx_immaterial"
+html_logo = "_static/cube_solid.png"
+html_favicon = "_static/rpl_favicon.ico"
 html_static_path = ["_static"]
+html_css_files = ["custom.css"]
 html_title = "Realms Playerlist Bot"
 html_theme_options = {
     # "font": False,
-
     "icon": {
         "repo": "fontawesome/brands/github",
         "edit": "material/file-edit-outline",
@@ -53,7 +65,6 @@ html_theme_options = {
             "quote": "octicons/quote-16",
         },
     },
-
     "features": [
         "navigation.expand",
         "navigation.sections",
@@ -64,30 +75,35 @@ html_theme_options = {
         "toc.sticky",
         "content.tabs.link",
     ],
-
     "palette": [
         {
-            "media": "(prefers-color-scheme: light)",
-            "scheme": "default",
+            "scheme": "automatic",
             "primary": "light-green",
             "accent": "light-green",
             "toggle": {
-                "icon": "material/weather-night",
-                "name": "Switch to dark mode",
+                "icon": "material/brightness-auto",
+                "name": "Switch to light mode",
             },
         },
         {
-            "media": "(prefers-color-scheme: dark)",
             "scheme": "slate",
             "primary": "light-green",
             "accent": "light-green",
             "toggle": {
-                "icon": "material/weather-sunny",
-                "name": "Switch to light mode",
+                "icon": "material/brightness-4",
+                "name": "Switch to system preference",
+            },
+        },
+        {
+            "scheme": "default",
+            "primary": "light-green",
+            "accent": "light-green",
+            "toggle": {
+                "icon": "material/brightness-7",
+                "name": "Switch to dark mode",
             },
         },
     ],
-
     "social": [
         {
             "icon": "fontawesome/brands/github",
@@ -95,13 +111,9 @@ html_theme_options = {
             "name": "Website source on github.com",
         },
     ],
-
     "repo_url": "https://github.com/AstreaTSS/RealmsPlayerlistBot",
     "repo_name": "RealmsPlayerlistBot",
     "repo_type": "github",
-
     "globaltoc_collapse": True,
     "toc_title_is_page_title": True,
 }
-
-# TODO: add opengraph, favicon

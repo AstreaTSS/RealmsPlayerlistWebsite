@@ -4,4 +4,4 @@ sphinx_immaterial
 sphinx-copybutton
 sphinx-hoverxref
 sphinxext-opengraph
-myst-parser
+myst-parser[linkify]
