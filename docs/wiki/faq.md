@@ -20,7 +20,7 @@ Nope. Neither of the methods listed above work with those. For servers (both edi
 
 ### What about the Realm Bot?
 
-I'm referring to [this bot](https://realmbot.dev/), by the way. We're officially partnered with them too, check them out!
+[I'm referring to this bot](https://realmbot.dev/), by the way. We're officially partnered with them too, check them out!
 
 Anyways, that bot is great - it's a bot that can *massively* help out any Realm owners, and I won't deny that. In fact, it even has its own version of the `/online` command this bot has, which can be a little bit more accurate at times for technical reasons.
 
@@ -36,7 +36,7 @@ Sadly, because it isn't *really* possible. In short, while there *is* a (somewha
 
 The Playerlist Bot focuses on being able to support multiple servers/Realms, so it isn't happening.
 
-The [Realm Bot](https://realmbot.dev/) does offer this feature in its premium version. No idea about the technical details for how it works, but it requires a space to be taken for a dummy account anyways, so it still isn't happening here. The Playerlist Bot is not even supposed to touch the Realm, beyond reading the playerlist.
+[The Realm Bot](https://realmbot.dev/) does offer this feature in its premium version. No idea about the technical details for how it works, but it requires a space to be taken for a dummy account anyways, so it still isn't happening here. The Playerlist Bot is not even supposed to touch the Realm, beyond reading the playerlist.
 
 ## Troubleshooting
 
@@ -65,7 +65,7 @@ To reliably get the gamertag of the XUID shown, you can use `/gamertag-from-xuid
 
 ...yes, but I can only wish you luck. This thing is *far* from simple to get everything working, requiring you to know the ins-and-outs of most of the libraries I use. It can be a mess, and gathering the databases and servers needed even more so. There's also not much room for simplification here. If you do want to continue, it's best if you have a decent understanding at Python, PostgreSQL, Redis, and Sentry.io before trying this.
 
-[This](https://github.com/OpenXbox/xbox-webapi-python) is a good place to start researching on how it all works. Everything the bot uses can be gotten for free in some way, shape, or form.
+[This Xbox API library](https://github.com/OpenXbox/xbox-webapi-python) is a good place to start researching on how it all works, as you'll need it to generate tokens to authenticate. Everything the bot uses can be gotten for free in some way, shape, or form.
 
 Little support will be given for self-hosters (not trying to sound cruel, but it takes away at my time. That being said, if you know what you're doing, I can help you with troubleshooting). I *do* plan on making a guide on how to host it eventually though.
 

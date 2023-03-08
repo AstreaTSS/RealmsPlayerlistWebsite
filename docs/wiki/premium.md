@@ -41,7 +41,7 @@ Anyways:
     - You do need to make a Ko-Fi account to do all of this - if you don't have one and your purchase Premium, you should get an email that'll allow you to create an account.
     - Ko-Fi may give you a prompt to join the Discord server right after you purchase Premium. If so, that's great! Just click that button. Otherwise, you can find a "Connect to Discord & Claim" button on my Ko-Fi page, or you can find it your "Payments and Orders" tab.
     - From there, it'll likely ask you if Ko-Fi can access your Discord account - you have to agree to it to continue.
-    - Hopefully, it should automatically join the server for you. If not, you can join [here](https://discord.gg/NSdetwGjpK).
+    - Hopefully, it should automatically join the server for you. If not, [you can join here](https://discord.gg/NSdetwGjpK).
     - If you wait a couple of minutes and get the "Playerlist Premium Supporter" role, you're all set for the next step!
     - Please consult the article linked at the very beginning of this page if you have any problems.
 

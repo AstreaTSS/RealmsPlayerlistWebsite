@@ -84,7 +84,7 @@ Free users have limited options that do not go back as far. Premium users can go
 
 **Realms Playerlist Premium** allows for extra features that otherwise could not be provided by the bot without funding. While this is very basic for now, it is planned to expand heavily in the future.
 
-Take a closer look at Premium [here.](wiki/premium)
+[Take a closer look at Premium here.](wiki/premium)
 
 ### Live Playerlist
 
