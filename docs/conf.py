@@ -18,23 +18,12 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "hoverxref.extension",
     "sphinx_copybutton",
-    "sphinxext.opengraph",
     "myst_parser",
 ]
 myst_enable_extensions = ["linkify"]
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "env"]
-
-# opengraph data
-ogp_site_url = "http://rpl.astrea.cc/"
-ogp_social_cards = {
-    "enable": True,
-    "site_url": "rpl.astrea.cc",
-    "image": "_static/rpl_icon.png",
-    "line_color": "#8ac249",
-}
-ogp_enable_meta_description = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
