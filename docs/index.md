@@ -126,3 +126,12 @@ wiki/faq
 legal/tos
 legal/privacy_policy
 ```
+
+```{toctree}
+:hidden:
+:caption: Links
+
+Support Server <https://discord.gg/NSdetwGjpK>
+Top.gg Page <https://top.gg/bot/725483868777611275>
+Ko-Fi Page <https://ko-fi.com/astreatss>
+```
