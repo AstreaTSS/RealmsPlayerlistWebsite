@@ -40,7 +40,7 @@ A couple of reasons:
 
 ## Troubleshooting
 
-### Help! The playerlist/online comamnd isn't working!
+### Help! The playerlist/online command isn't working!
 
 Well, this could be due to a number of reasons:
 - For the autorunner version: was anyone on the Realm during that time? If there was no one, then the bot will not autorun the list during that time.
