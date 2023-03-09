@@ -4,19 +4,19 @@
 
 ### What is this bot?
 
-Well, like the `README` says: it's a bot that keeps a log of players who joined and left for Minecraft: Bedrock Edition Realms. The `README` has more information about that, though.
+Well, like the `README` says: it's a bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves. The `README` has more information about that, though.
 
 ### How does it work?
 
-There are two "methods" to keep in mind. Why am I talking about these? Well, you'll see, but:
-- The "Realms" method relies on a [hidden little service](https://wiki.vg/Bedrock_Realms) that Bedrock Realms have, allowing anyone to get specific information about Realms if they know what they're doing. One piece of information we can get is a list of people online for *every* Realm an account is in at any one moment, which the bot essentially constantly polls in order to generate its list.
-- The "Clubs" method uses the fact that all Bedrock Realms have Xbox Clubs (basically, a little group that players can use to communicate with each other on Xbox Live); you can see this yourself by using the Xbox app and looking at your own profile if you've joined a Realm, or by using the social feed in game, which is powered by clubs. Among other things, clubs keep a list of players who are on and who *were* on, so the bot can poll that as needed.
+Basically, the bot uses a [hidden little service](https://wiki.vg/Bedrock_Realms) that Bedrock Realms have, allowing anyone to get specific information about Realms if they know what they're doing. One piece of information we can get is a list of people online for *every* Realm an account is in at any one moment, which the bot essentially constantly polls in order to generate its list.
 
-While being set up, the bot will uses the "Clubs" method in order to get past data from before it joined the Realm. After being set up, it uses the "Realms" method to continually poll data from there. While I would *like* to use the "Clubs" method for every part, the method doesn't like to be abused, and so I can't exactly poll 50+ clubs for the playerlist at once for the version that runs every hour - who would have thought 😅. 
+The hard part is actually *parsing* that data - again, you can only get every Realm at any one moment, so you have to poll it constantly in order to generate minute-to-minute data. There's also quite a bit of difficulty involving making the data human-readable for various reasons, including displaying players in a friendly format.
+
+When you initially link your server to a Realm though, it uses a different method that is less reliable than the service, but is able to get data from the past. This is why the initial data may be inaccurate.
 
 ### Does this work on Bedrock servers? What about Java Edition Realms and servers?
 
-Nope. Neither of the methods listed above work with those. For servers (both editions), you can get away with plugins/mods; for Java Edition, there *is* a Java Realm service that someone could use if they're interested enough.
+Nope. This uses Realm-specific services. For servers (both editions), you can get away with plugins/mods; for Java Edition, there *is* a Java Realm service that someone could use if they're interested enough.
 
 ### What about the Realm Bot?
 
@@ -28,15 +28,15 @@ However, the Realm Playerlist Bot is not a "remote Realms control" bot (unlike R
 
 I have doubts that the Realm Bot will be able to do what this bot does because of how complex it is. Regardless, use what you want to use, and there's no harm in having both.
 
-(As for *why* `/online` is less accurate than Realm Bot's `/realm players` - the Playerlist bot caches results for performance, while Realm Bot does a request each time the command is run. Note that the Playerlist requires one Xbox account to operate that you don't typically even have to see, while the Realm Bot requires you to link your account, which it'll then use for everything. Due to a number of technical reasons, this means if the Playerlist bot did a request each time the command was ran, it would have to process a *lot* more data than the Realm Bot does, which isn't ideal.)
+(Note that the Realm Bot has `/realm players`, which is essentially Playerlist's `/online`. However, that produces different and usually less accurate data than `/online` due to a number of technical reasons.)
 
 ### Why can't it track a Realm's chat?
 
-Sadly, because it isn't *really* possible. In short, while there *is* a (somewhat) easy way of making a bot for *one single Realm-to-Discord server combination* do it, it's more or less *impossible* to make it work with multiple combinations outside of literally making a new Xbox account per Realm. Each account would only be able to track one Realm's chat at a time.
-
-The Playerlist Bot focuses on being able to support multiple servers/Realms, so it isn't happening.
-
-[The Realm Bot](https://realmbot.dev/) does offer this feature in its premium version. No idea about the technical details for how it works, but it requires a space to be taken for a dummy account anyways, so it still isn't happening here. The Playerlist Bot is not even supposed to touch the Realm, beyond reading the playerlist.
+A couple of reasons:
+- It's a bit difficult. There is a way out there, but it currently only works for *one single Realm-to-Discord server combination* unless you do a number of things to work around it. It's a huge time investment to make it work, and it would change how the bot is used by a decent bit.
+- Even if I *do* get it to work, it requires a dummy account to *always* be on the Realm, thus taking up a player space. This is something I'm against doing ever.
+- Frankly, it's out of scope for the bot. It would be nice, but the bot mostly tracks player join/leaves in order to not reinvent the wheel and allow for easier maintainability (the bot is largely written by one person, so maintainability is key).
+- [The Realm Bot](https://realmbot.dev/) offers this feature in its premium version.
 
 ## Troubleshooting
 
@@ -45,7 +45,7 @@ The Playerlist Bot focuses on being able to support multiple servers/Realms, so 
 Well, this could be due to a number of reasons:
 - For the autorunner version: was anyone on the Realm during that time? If there was no one, then the bot will not autorun the list during that time.
 - Did you accidentally kick the account responsible for keeping track of the Realm? Did you decide to change which Realm a "Realm" is using? Try relinking it via `/config link-realm`!
-- Did it spit out an error? I'll (or whoever is running the instance of your bot) already have the error and more information, so don't worry about that.
+- Did it spit out an error? I'll already have the error and more information, so don't worry about that.
 
 ### There's a user called "Account with XUID (insert numbers here)" on the list. Who's that?
 
@@ -77,13 +77,11 @@ Note that Python is *not* like Javascript, the most popular language for making 
 
 ### Why is this bot so complex?
 
-Funny enough, neither of the two methods the bot can use are really *that* complex. The Realms method is annoying for sure, since it's a bulk-only endpoint that only tells us who's online in a Realm, but the logic to make it work as a playerlist isn't anything really hard to understand - just keep a copy of the last minute's online list and compare it.
-
-What *is* hard, however, is turning the XUIDs from these methods into gamertags *at scale*. This is because:
-- The Xbox API *sucks.* It is *horribly* documented (literally anything about clubs is more or less hidden away, as obscure as it can be), and it throws a *lot* of errors even if you're doing absolutely everything right. There's reasons why services like OpenXBL exists - it's legitimately so bad that *an API for an API* needs to exist.
-- This is compounded by the fact that `xbox-webapi-python` is almost absurdly complex. It is a *pain* to set up, and its folder structure makes me want to scream. *To be fair*, without it, I would have no way of authenticating the Xbox API, but still.
-- Going back to the gamertag issue, the bulk endpoint for getting people's profiles (which has their gamertags) *seems* like the perfect solution to everything, but it errors out if you request more than ~30 people at a time. This isn't enough for big realms, and so forces us to use a backup method using OpenXBL while we wait for the ratelimit caused by the request to go away (OpenXBL isn't ratelimited, from what I can tell). A lot of things had to be put together to make sure it uses both systems as effectively as possible when they are needed, and so the final result came to be.
-- Did I mention that the Xbox API just *fails* sometimes? Like, the bot sometimes gets a `200` status when requesting a gamertag without getting *any* data, and sometimes the Xbox API throws a `500` to keep you on your toes.
-- It should be noted that the bot actually *does* keep its own cache of XUID > gamertags just to hope it doesn't have to rely on the Xbox API except when needed. I purposely made it expire entries after 14 days so there isn't an outdated gamertag for too long, though.
-
-It also helps that there's a growing demand for more complex statical data to come from the bot. This requires usage of a database to do so, which just adds onto everything.
+A lot of reasons:
+- The Xbox/Realm API (they're essentially the same thing, being made by Microsoft) is a pain to work with. There's a reason why people have made tools like [OpenXBL](https://xbl.io/) or [XAPI](https://xapi.us/) - there's a lot of pain points when it comes to *just authenticating into the APIs themselves*, and it's a lot easier to just let someone else do that work. Unforunately, it comes at a speed cost, and also has limits that would be too restrictive for Playerlist. Instead, we do everything ourselves, adding a lot of complexity.
+  - Now, [there is an Xbox API library made in Python](https://github.com/OpenXbox/xbox-webapi-python), as discussed in an earlier question, and it does help shed some light on how the whole process works. However, that library is very obtuse (having several questionable design choices that go against the core of Python) and is slower than it could be for many reasons, so I've had to make mini-libraries in the bot itself. The library is still used, but mostly for a couple of convenience functions these days, and soon it will be removed entirely.
+  - Even *when* you log in, the Xbox/Realm API is just a mess. A lot of inconsistency with capitalization that makes it a pain to parse, lots of undocumented fields and behaviors (90% of the bot's code uses undocumented endpoints), and general inconsistency with the results you get. I very much sense Microsoft made the API when they were new to making APIs, and is unable to improve it due to how many things that would break. That and they really do not like simple authentication.
+  - Oh yeah, the APIs just *fail* sometimes. Like, it's a completely normal thing and you can't do anything about it.
+- There's a lot of processing involved. Not just with the APIs, but also with the data gotten from it - it all eventually has to be converted into a format that is usable by the bot, which takes some effort. It also has to be *fast*, which takes even more effort to do (speed is the reason Redis is used, for example).
+- Even when the data is stored, it has to be turned into a human-friendly format, which takes yet more work. It's more complex than you think.
+- Some pains were taken to make the commands more user-friendly at the exchange of more complex code. It's just how it is.
