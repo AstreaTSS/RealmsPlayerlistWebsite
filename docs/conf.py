@@ -29,7 +29,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "env"]
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "sphinx_immaterial"
-html_logo = "_static/cube_solid.png"
+html_logo = "_static/realm_m.png"
 html_favicon = "_static/rpl_favicon.ico"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
