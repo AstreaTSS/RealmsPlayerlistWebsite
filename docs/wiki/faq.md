@@ -38,6 +38,14 @@ A couple of reasons:
 - Frankly, it's out of scope for the bot. It would be nice, but the bot mostly tracks player join/leaves in order to not reinvent the wheel and allow for easier maintainability (the bot is largely written by one person, so maintainability is key).
 - [The Realm Bot](https://realmbot.dev/) offers this feature in its premium version.
 
+### Can I link multiple Realms to one Discord server? Can I have two playerlist channels, each one being linked to a different Realm?
+
+Nope. It would be a nice feature admittedly, and I've gotten plenty of people asking, but...
+- It would be a pain to go into the code for the bot to make it work, as the bot very much assumes and abuses the fact that there is only one Realm per Discord server.
+- Even if it was supported, it would create additional strain on the bot, and most likely be a Premium feature.
+
+Your best bet is to just have two servers, one per Realm. This idea is most likely not ever going to happen, but it may in the far future.
+
 ## Troubleshooting
 
 ### Help! The playerlist/online command isn't working!
