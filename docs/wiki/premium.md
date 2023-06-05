@@ -11,7 +11,7 @@ Instead of making the bot send a summary of people on every hour, a **live playe
 It looks something like this (minus the obvious censoring):
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/25420078/194965554-7e0b15a4-2186-4797-bd1d-9645c1caee79.png" alt="Preview on how the live playerlist looks like." height=420/>
+  <img src="../_static/live_playerlist.png" alt="Preview on how the live playerlist looks like." height=420/>
 </p>
 
 This has a variety of uses, from statistical to moderation - it's really up to you what you do with this information. I know of one Realm owner who uses it both to narrow down subjects to a precise degree while also tracking active Realm times. Using Discord's search functionality (heavily suggest looking into that if you haven't use it, by the way), the possibilities are near endless.

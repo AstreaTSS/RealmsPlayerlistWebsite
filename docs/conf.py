@@ -29,7 +29,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "env"]
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "sphinx_immaterial"
-html_logo = "_static/realm_m.png"
+html_logo = "_static/rpl_symbol_white.png"
 html_favicon = "_static/rpl_favicon.ico"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
@@ -67,8 +67,8 @@ html_theme_options = {
     "palette": [
         {
             "scheme": "automatic",
-            "primary": "light-green",
-            "accent": "light-green",
+            "primary": "deep-purple",
+            "accent": "deep-purple",
             "toggle": {
                 "icon": "material/brightness-auto",
                 "name": "Switch to light mode",
@@ -76,8 +76,8 @@ html_theme_options = {
         },
         {
             "scheme": "slate",
-            "primary": "light-green",
-            "accent": "light-green",
+            "primary": "deep-purple",
+            "accent": "deep-purple",
             "toggle": {
                 "icon": "material/brightness-4",
                 "name": "Switch to system preference",
@@ -85,8 +85,8 @@ html_theme_options = {
         },
         {
             "scheme": "default",
-            "primary": "light-green",
-            "accent": "light-green",
+            "primary": "deep-purple",
+            "accent": "deep-purple",
             "toggle": {
                 "icon": "material/brightness-7",
                 "name": "Switch to dark mode",
@@ -101,7 +101,7 @@ html_theme_options = {
         },
     ],
     "repo_url": "https://github.com/AstreaTSS/RealmsPlayerlistBot",
-    "repo_name": "RealmsPlayerlistBot",
+    "repo_name": "AstreaTSS/RealmsPlayerlistBot",
     "repo_type": "github",
     "globaltoc_collapse": True,
     "toc_title_is_page_title": True,
