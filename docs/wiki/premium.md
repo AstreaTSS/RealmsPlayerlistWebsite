@@ -18,6 +18,18 @@ This has a variety of uses, from statistical to moderation - it's really up to y
 
 Of course, this is more spammy than the summary given every hour, and also *replaces the autorunner version entirely.* The `/playerlist` command will still be available to you, though, and the benefits most likely outweigh the downsides for you.
 
+### Device Information
+
+Through an extra toggle (`/premium fetch-devices`), the bot can fetch and display device information whenever a user is online. This affects `/online`, the normal playerlist, and the live playerlist.
+
+For example, `/online` becomes this:
+
+<p align="center">
+  <img src="../_static/fetch_devices.png" alt="Preview on how `/online` looks when the toggle is enabled." height=420/>
+</p>
+
+This does slow the bot down a bit when fetching the device, and privacy settings may make some users not have information regardless, but can used as an extra moderation/statistical tool.
+
 ### More Options For Graphs
 
 Free users have a limited period of how far they can go back in terms of the data graphed, and have limited options on how it can be graphs. With Premium, users can go back 30 days and graph in a variety of ways.

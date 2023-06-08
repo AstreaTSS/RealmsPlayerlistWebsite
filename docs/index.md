@@ -94,13 +94,25 @@ Free users have limited options that do not go back as far. Premium users can go
 
 Instead of making the bot send a summary of people on every hour, a **live playerlist** shows who joined and left a Realm every minute, basically making it a live join/leave logger.
 
-It looks something like this (minus the obvious censoring):
+It looks something like this:
 
 <p align="center">
   <img src="_static/live_playerlist.png" alt="Preview on how the live playerlist looks like." height=420/>
 </p>
 
 This has a variety of uses, from statistical to moderation - it's really up to you what you do with this information. I know of one Realm owner who uses it both to narrow down subjects to a precise degree while also tracking active Realm times. Using Discord's search functionality (heavily suggest looking into that if you haven't use it, by the way), the possibilities are near endless.
+
+### Device Information
+
+Through an extra toggle, the bot can fetch and display device information whenever a user is online. This affects `/online`, the normal playerlist, and the live playerlist.
+
+For example, `/online` becomes this:
+
+<p align="center">
+  <img src="_static/fetch_devices.png" alt="Preview on how `/online` looks when the toggle is enabled." height=420/>
+</p>
+
+This does slow the bot down a bit when fetching the device, and privacy settings may make some users not have information regardless, but can used as an extra moderation/statistical tool.
 
 ### More Options For Graphs
 
