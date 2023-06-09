@@ -21,6 +21,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Compress Images
+      id: calibre
+      uses: calibreapp/image-actions@main
+      with:
+        githubToken: ${{ secrets.GITHUB_TOKEN }}
+        compressOnly: true
 
     - name: Set up Python environment
       uses: actions/setup-python@v4
@@ -35,13 +42,6 @@ jobs:
 
     - name: Install dependencies
       run: pip install -r requirements.txt
-      
-    - name: Compress Images
-      id: calibre
-      uses: calibreapp/image-actions@main
-      with:
-        githubToken: ${{ secrets.GITHUB_TOKEN }}
-        compressOnly: true
 
     - name: Build the sphinx documentation
       uses: rickstaa/sphinx-action@master
