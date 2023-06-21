@@ -54,14 +54,11 @@ jobs:
         directory: "docs"
         add_suffix: false
 
-    - name: Setup Pages
-      uses: actions/configure-pages@v3
-
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+    - name: Publish to Cloudflare Pages
+      uses: cloudflare/pages-action@1
       with:
-        path: 'docs/_build/html'
-        
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        projectName: rpl
+        directory: docs/_build/html
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
