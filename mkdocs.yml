@@ -67,6 +67,10 @@ extra:
 plugins:
   - search
   - offline
+  - custom-cards:
+      cards_layout_options:
+        background_color: "#b05bff1E"
+        background_image: _static/social_card_bg.png
   - autorefs
   - awesome-pages
   - git-revision-date-localized
