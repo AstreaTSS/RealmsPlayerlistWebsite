@@ -1,3 +1,7 @@
+---
+description: The terms of service for the Realms Playerlist Bot.
+---
+
 # Terms of Service
 
 *Last updated: 06/26/2022 (MM/DD/YYYY).*

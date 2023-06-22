@@ -44,15 +44,21 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    - name: Build the sphinx documentation
-      uses: rickstaa/sphinx-action@master
+    - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+    - uses: actions/cache@v3
       with:
-        docs-folder: "./docs"
+        key: mkdocs-material-${{ env.cache_id }}
+        path: .cache
+        restore-keys: |
+          mkdocs-material-
+
+    - name: Build the documentation
+      run: mkdocs build
 
     - name: HTML/CSS/JS Minifier
       uses: docker://devatherock/minify-js:1.0.3
       with:
-        directory: "docs"
+        directory: "site"
         add_suffix: false
 
     - name: Publish to Cloudflare Pages
@@ -61,5 +67,5 @@ jobs:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         projectName: rpl
-        directory: docs/_build/html
+        directory: site
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}

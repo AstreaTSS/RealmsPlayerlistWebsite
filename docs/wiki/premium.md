@@ -1,6 +1,11 @@
+---
+description: Information about Realms Playerlist Premium and how to get it.
+---
+
+
 # Playerlist Premium and How to Get It
 
-Hey! **Realms Playerlist Premium** is a monthly purchase you can make in order to get special features not usually obtainable. These are usually locked behind a paywall because it would be infeasible to allow everyone to use these features without making the bot as a whole suffer - by limiting the amount of users who can use them, I can still provide these features to those who need it while also earning funds necessary to keep the bot alive and running as it grows (scaling isn't cheap).
+**Realms Playerlist Premium** is a monthly purchase you can make in order to get special features not usually obtainable. These are usually locked behind a paywall because it would be infeasible to allow everyone to use these features without making the bot as a whole suffer - by limiting the amount of users who can use them, I can still provide these features to those who need it while also earning funds necessary to keep the bot alive and running as it grows (scaling isn't cheap).
 
 ## Features
 
@@ -11,7 +16,7 @@ Instead of making the bot send a summary of people on every hour, a **live playe
 It looks something like this (minus the obvious censoring):
 
 <p align="center">
-  <img src="../_static/live_playerlist.png" alt="Preview on how the live playerlist looks like." height=420/>
+  <img src="../../_static/live_playerlist.png" alt="Preview on how the live playerlist looks like." height=420/>
 </p>
 
 This has a variety of uses, from statistical to moderation - it's really up to you what you do with this information. I know of one Realm owner who uses it both to narrow down subjects to a precise degree while also tracking active Realm times. Using Discord's search functionality (heavily suggest looking into that if you haven't use it, by the way), the possibilities are near endless.
@@ -25,7 +30,7 @@ Through an extra toggle (`/premium fetch-devices`), the bot can fetch and displa
 For example, `/online` becomes this:
 
 <p align="center">
-  <img src="../_static/fetch_devices.png" alt="Preview on how `/online` looks when the toggle is enabled." height=420/>
+  <img src="../../_static/fetch_devices.png" alt="Preview on how `/online` looks when the toggle is enabled." height=420/>
 </p>
 
 This does slow the bot down a bit when fetching the device, and privacy settings may make some users not have information regardless, but can used as an extra moderation/statistical tool.
@@ -39,6 +44,7 @@ Free users have a limited period of how far they can go back in terms of the dat
 Now, you might be wondering how to get it, huh?
 
 You'll need:
+
 - A valid payment source.
 - A Discord account that can join and stay in a server.
 - Of course, a server to actually redeem Premium in. Or, well, you actually can redeem it in two servers if you want.

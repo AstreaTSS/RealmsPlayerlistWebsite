@@ -1,3 +1,7 @@
+---
+description: Acknowledgements for various people/tools/companies that helped make the Realms Playerlist Bot.
+---
+
 # Acknowledgements
 
 *Note: this is an informal section, and probably needs polishing.*

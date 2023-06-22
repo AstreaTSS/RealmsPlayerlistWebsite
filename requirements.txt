@@ -1,6 +1,7 @@
 wheel
-Sphinx
-sphinx_immaterial
-sphinx-copybutton
-sphinx-hoverxref
-myst-parser[linkify]
+mkdocs-material
+pillow
+cairosvg
+mkdocs-awesome-pages-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-autorefs

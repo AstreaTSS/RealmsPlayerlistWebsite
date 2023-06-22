@@ -1,3 +1,7 @@
+---
+description: Frequently asked questions about the Realms Playerlist Bot.
+---
+
 # Frequently Asked Questions
 
 ## General
@@ -33,6 +37,7 @@ I have doubts that the Realm Bot will be able to do what this bot does because o
 ### Why can't it track a Realm's chat?
 
 A couple of reasons:
+
 - It's a bit difficult. There is a way out there, but it currently only works for *one single Realm-to-Discord server combination* unless you do a number of things to work around it. It's a huge time investment to make it work, and it would change how the bot is used by a decent bit.
 - Even if I *do* get it to work, it requires a dummy account to *always* be on the Realm, thus taking up a player space. This is something I'm against doing ever.
 - Frankly, it's out of scope for the bot. It would be nice, but the bot mostly tracks player join/leaves in order to not reinvent the wheel and allow for easier maintainability (the bot is largely written by one person, so maintainability is key).
@@ -41,6 +46,7 @@ A couple of reasons:
 ### Can I link multiple Realms to one Discord server? Can I have two playerlist channels, each one being linked to a different Realm?
 
 Nope. It would be a nice feature admittedly, and I've gotten plenty of people asking, but...
+
 - It would be a pain to go into the code for the bot to make it work, as the bot very much assumes and abuses the fact that there is only one Realm per Discord server.
 - Even if it was supported, it would create additional strain on the bot, and most likely be a Premium feature.
 
@@ -51,6 +57,7 @@ Your best bet is to just have two servers, one per Realm. This idea is most like
 ### Help! The playerlist/online command isn't working!
 
 Well, this could be due to a number of reasons:
+
 - For the autorunner version: was anyone on the Realm during that time? If there was no one, then the bot will not autorun the list during that time.
 - Did you accidentally kick the account responsible for keeping track of the Realm? Did you decide to change which Realm a "Realm" is using? Try relinking it via `/config link-realm`!
 - Did it spit out an error? I'll already have the error and more information, so don't worry about that.
@@ -86,6 +93,7 @@ Note that Python is *not* like Javascript, the most popular language for making 
 ### Why is this bot so complex?
 
 A lot of reasons:
+
 - The Xbox/Realm API (they're essentially the same thing, being made by Microsoft) is a pain to work with. There's a reason why people have made tools like [OpenXBL](https://xbl.io/) or [XAPI](https://xapi.us/) - there's a lot of pain points when it comes to *just authenticating into the APIs themselves*, and it's a lot easier to just let someone else do that work. Unforunately, it comes at a speed cost, and also has limits that would be too restrictive for Playerlist. Instead, we do everything ourselves, adding a lot of complexity.
   - Now, [there is an Xbox API library made in Python](https://github.com/OpenXbox/xbox-webapi-python), as discussed in an earlier question, and it does help shed some light on how the whole process works. However, that library is very obtuse (having several questionable design choices that go against the core of Python) and is slower than it could be for many reasons, so I've had to make mini-libraries in the bot itself. The library is still used, but mostly for a couple of convenience functions these days, and soon it will be removed entirely.
   - Even *when* you log in, the Xbox/Realm API is just a mess. A lot of inconsistency with capitalization that makes it a pain to parse, lots of undocumented fields and behaviors (90% of the bot's code uses undocumented endpoints), and general inconsistency with the results you get. I very much sense Microsoft made the API when they were new to making APIs, and is unable to improve it due to how many things that would break. That and they really do not like simple authentication.

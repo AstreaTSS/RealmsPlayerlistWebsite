@@ -1,0 +1,85 @@
+site_name: Realms Playerlist Bot
+site_description: "A bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves."
+site_url: https://rpl.astrea.cc
+theme:
+  name: material
+  logo: _static/rpl_symbol_white.png
+  favicon: _static/rpl_favicon.ico
+
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+    - scheme: automatic
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+    - scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.tabs.link
+
+extra_css:
+  - _static/custom.css
+
+repo_url: https://github.com/AstreaTSS/RealmsPlayerlistBot
+repo_name: AstreaTSS/RealmsPlayerlistBot
+
+copyright: "&copy Copyright 2020-present, AstreaTSS"
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/AstreaTSS/RealmsPlayerlistWebsite
+      name: Website source on github.com
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+plugins:
+  - search
+  - offline
+  - social:
+      cards_dir: assets/images/social
+      cards_layout_options:
+        background_color: "#b05bff"
+  - autorefs
+  - awesome-pages
+  - git-revision-date-localized
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tilde

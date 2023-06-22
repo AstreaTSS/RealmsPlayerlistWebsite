@@ -22,14 +22,15 @@
 </p>
 
 It's:
+
 - 🚀 **Fast:** Under the right (and typical) circumstances, it can generate a list of ~300 players in under *4 seconds,* 3-3.5 of which is only due to Discord's rate limits.
 - 📊 **Informative:** The main feature of the bot, the playerlist, can give a detailed log of players on a Realm at a moment's notice. You can also get a breakdown for an individual player to analyze as you wish.
 - 👌 **Easy to Use**: Simply add the bot, link your Realm, and you already have join/leave tracking enabled. Take a look at the [Server Setup Guide](wiki/server_setup) for more information.
 - 🔓 **Open Source**: The code is available to the public and able to be audited and learned from. Dedicated users can even (try to) self-host the bot, if they wish.
 
-# Features
+## Features
 
-## The Playerlist
+### The Playerlist
 Of course, this is the main feature of the bot. It's also one of those features that is easier to show than tell:
 
 <p align="center">
@@ -47,7 +48,7 @@ The command can normally only be run by people with Manage Server permissions (c
   <img src="_static/online.png" alt="Picture of how /online looks like." width=450/>
 </p>
 
-## Specific Player Information
+### Specific Player Information
 
 You can also request for a breakdown of join/leaves (otherwise known as sessions) via `/get-player-log`:
 
@@ -59,7 +60,7 @@ Using this command allows you to scroll through each session in an intuitive for
 
 By default, the command only goes back a day, but it can go till 7, as seen here.
 
-## Realm Offline Notifications
+### Realm Offline Notifications
 
 Realms go offline a lot if they're big, most likely because they can't handle the load. Sometimes, it can be useful to get pinged when that happens:
 
@@ -72,7 +73,7 @@ Realms go offline a lot if they're big, most likely because they can't handle th
 
 This simply hooks onto your autorunning playerlist. The Realm offline detection is mostly accurate - it may not work as well for smaller Realms, but for larger ones, it should work fine.
 
-## Graphs
+### Graphs
 
 You can make cool graphs about your Realm and its users:
 
@@ -84,13 +85,13 @@ There are a variety of options to chose from, from the graph up above to a day-t
 
 Free users have limited options that do not go back as far. Premium users can go all the way back to 30 days.
 
-## Premium
+### Premium
 
 **Realms Playerlist Premium** allows for extra features that otherwise could not be provided by the bot without funding. While this is very basic for now, it is planned to expand heavily in the future.
 
 [Take a closer look at Premium here.](wiki/premium)
 
-### Live Playerlist
+#### Live Playerlist
 
 Instead of making the bot send a summary of people on every hour, a **live playerlist** shows who joined and left a Realm every minute, basically making it a live join/leave logger.
 
@@ -102,7 +103,7 @@ It looks something like this:
 
 This has a variety of uses, from statistical to moderation - it's really up to you what you do with this information. I know of one Realm owner who uses it both to narrow down subjects to a precise degree while also tracking active Realm times. Using Discord's search functionality (heavily suggest looking into that if you haven't use it, by the way), the possibilities are near endless.
 
-### Device Information
+#### Device Information
 
 Through an extra toggle, the bot can fetch and display device information whenever a user is online. This affects `/online`, the normal playerlist, and the live playerlist.
 
@@ -114,41 +115,14 @@ For example, `/online` becomes this:
 
 This does slow the bot down a bit when fetching the device, and privacy settings may make some users not have information regardless, but can used as an extra moderation/statistical tool.
 
-### More Options For Graphs
+#### More Options For Graphs
 
 Free users have a limited period of how far they can go back in terms of the data graphed, and have limited options on how it can be graphs. With Premium, users can go back 30 days and graph in a variety of ways.
 
-# Adding The Bot
+## Adding The Bot
 
 If you wish to add this bot, just [use the Server Setup Guide on how to do so](wiki/server_setup). It'll give a basic rundown on how to set up the bot, as well as showing how to set basic options.
 
-# FAQ
+## FAQ
 
 There's a whole section in the wiki about this! [Check it out here](wiki/faq).
-
-```{toctree}
-:hidden:
-:caption: Wiki
-
-wiki/server_setup
-wiki/premium
-wiki/faq
-```
-
-```{toctree}
-:hidden:
-:caption: Legal
-
-legal/tos
-legal/privacy_policy
-legal/acknowledgements
-```
-
-```{toctree}
-:hidden:
-:caption: External Links
-
-Support Server <https://discord.gg/NSdetwGjpK>
-Top.gg Page <https://top.gg/bot/725483868777611275>
-Ko-Fi Page <https://ko-fi.com/astreatss>
-```

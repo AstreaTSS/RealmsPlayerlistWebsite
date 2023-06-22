@@ -1,3 +1,8 @@
+---
+description: How to set up the bot.
+---
+
+
 # Server Setup
 
 Setting up the bot is easy. You'll just need:
@@ -18,5 +23,6 @@ You can view your configuration at any time via `/config info`.
 ## Invite Link
 
 If you just want the invite link for the version hosted by me, you can use:
+
 - https://sh.astrea.cc/inviteplayerlist
 - If you don't trust that link (it's just a shortened link for the following, but still), you can use the raw Discord link: https://discord.com/api/oauth2/authorize?client_id=725483868777611275&permissions=309238025280&scope=applications.commands%20bot

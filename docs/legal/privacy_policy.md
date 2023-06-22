@@ -1,3 +1,7 @@
+---
+description: The privacy policy for the Realms Playerlist Bot.
+---
+
 # Privacy Policy
 
 *Last updated: 01/05/2022 (MM/DD/YYYY).*
@@ -65,6 +69,7 @@ The Bot stores information relating to a Server's configuration. This informatio
 The Bot uses Redis/a cache in order to store a link between "XUID", the way Xbox Services denotes its Users, and a "Gamertag", a human-friendly way of referring to said User. Entries are automatically deleted after 14 days.
 
 #### Realm Player Session Activity
+
 The Bot uses Xbox Services in order to track Players on Realms, and stores it per each session - a period of time where a Player was on a Realm. This data is deleted after 31 days after the Player left the Realm for that session, or when the last Server tracking the Realm removes the bot.
 
 ## Your Rights to Your Data
