@@ -1,8 +1,8 @@
 site_name: Realms Playerlist Bot
-site_description: "A bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves."
 site_url: https://rpl.astrea.cc
 theme:
   name: material
+  custom_dir: overrides
   logo: _static/rpl_symbol_white.png
   favicon: _static/rpl_favicon.ico
 
@@ -66,10 +66,6 @@ extra:
 plugins:
   - search
   - offline
-  - social:
-      cards_dir: assets/images/social
-      cards_layout_options:
-        background_color: "#b05bff"
   - autorefs
   - awesome-pages
   - git-revision-date-localized
