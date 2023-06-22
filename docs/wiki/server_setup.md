@@ -1,5 +1,5 @@
 ---
-description: How to set up the bot.
+description: A guide on how to set up the Realms Playerlist Bot.
 ---
 
 

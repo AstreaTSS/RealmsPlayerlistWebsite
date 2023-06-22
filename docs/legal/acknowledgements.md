@@ -1,5 +1,5 @@
 ---
-description: Acknowledgements for various people/tools/companies that helped make the Realms Playerlist Bot.
+description: Acknowledgements for various people/tools/companies that helped make the Realms Playerlist Bot possible.
 ---
 
 # Acknowledgements
