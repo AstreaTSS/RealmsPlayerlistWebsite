@@ -3,15 +3,12 @@
 {%- block extrahead %}
     <!-- HTML Meta Tags -->
     {% if page.meta and page.meta.description %}
-    <meta name="description" content="{{ page.meta.description }}" />
     <meta property="og:description" content="{{ page.meta.description }}">
     <meta name="twitter:description" content="{{ page.meta.description }}">
     {% elif config.site_description %}
-    <meta name="description" content="{{ config.site_description }}" />
     <meta property="og:description" content="{{ config.site_description }}">
     <meta name="twitter:description" content="{{ config.site_description }}">
     {% else %}
-    <meta name="description" content="A bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves.">
     <meta property="og:description" content="A bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves.">
     <meta name="twitter:description" content="A bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves.">
     {% endif %}

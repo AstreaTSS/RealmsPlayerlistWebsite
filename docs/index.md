@@ -1,3 +1,8 @@
+---
+hide:
+  - footer
+---
+
 <p align="center">
   <img src="_static/rpl_banner.png" alt="Realm Playerlist Bot's Banner." width=700/>
 </p>
