@@ -1,16 +1,16 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="custom-mkdocs-plugins",
+    name="mkdocs-custom-plugins",
     version="0.0.1",
     install_requires=[
         "mkdocs-material",
         "pillow",
     ],
-    packages=find_packages(where="mkdocs_custom"),
+    packages=find_packages(),
     entry_points={
         "mkdocs.plugins": [
-            "custom-cards = mkdocs_custom.social:CustomSocialPlugin",
+            "custom-cards = mkdocs_custom_plugins.social:CustomSocialPlugin",
         ]
     },
 )
