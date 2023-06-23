@@ -19,7 +19,7 @@ It looks something like this:
   ![Picture on how live playerlist looks like.](../../_static/live_playerlist.png){ width="420" loading="lazy"}
 </figure>
 
-This has a variety of uses, from statistical to moderation - it's really up to you what you do with this information. I know of one Realm owner who uses it both to narrow down subjects to a precise degree while also tracking active Realm times. Using Discord's search functionality (heavily suggest looking into that if you haven't use it, by the way), the possibilities are near endless.
+This has a variety of uses, from statistical to moderation - it's really up to you what you do with this information. Some Realms use it both to narrow down subjects to a precise degree while also tracking active Realm times. Using Discord's search functionality, the possibilities are near endless.
 
 Of course, this is more spammy than the summary given every hour, and also *replaces the autorunner version entirely.* The `/playerlist` command will still be available to you, though, and the benefits most likely outweigh the downsides for you.
 
@@ -33,19 +33,18 @@ For example, `/online` becomes this:
   ![Picture on how `/online` looks when the toggle is enabled.](../../_static/fetch_devices.png){ width="420" loading="lazy"}
 </figure>
 
-This does slow the bot down a bit when fetching the device, and privacy settings may make some users not have information regardless, but can used as an extra moderation/statistical tool.
+This does slow the bot down a bit when fetching the device[^1], and privacy settings may make some users not have information regardless[^2], but can used as an extra moderation/statistical tool.
 
 ### More Options For Graphs
 
-Free users have a limited period of how far they can go back in terms of the data graphed, and have limited options on how it can be graphs. With Premium, users can go back 30 days and graph in a variety of ways.
+As mentioned earlier, free users can only go back 7 days for their graphs, and have limited options on how it can be graphed. With Premium, users can go back 30 days and graph in a variety of ways.
 
 ## How to Get Playerlist Premium
 
 Now, you might be wondering how to get it, huh?
 
 You'll need:
-
-- A valid payment source.
+- A valid payment source.[^3]
 - A Discord account that can join and stay in a server.
 - Of course, a server to actually redeem Premium in. Or, well, you actually can redeem it in two servers if you want.
 
@@ -69,6 +68,10 @@ Anyways:
 
 5. On the server you want to enable Premium in, use the command `/premium redeem` and input the code you got. If it all works, the bot should tell you it was a success. Just note *you cannot undo this action, and will permanently use one of your two uses.*
 
-And you're done! Some Premium features may still need to be enabled afterwards - for example, the live playerlist needs to be enabled by `/premium toggle-live-playerlist` before it'll start working. You can check that you still have Premium by using `/config info`.
+And you're done! Some Premium features may still need to be enabled afterwards - for example, the live playerlist needs to be enabled by `/premium live-playerlist` before it'll start working. You can check that you still have Premium by using `/config info`.
 
 Also, if you ever leave "Astrea's Galaxy", you'll lose Premium immediately. Sorry, just a limitation with how I verify you're still subscribed to the membership tier.
+
+[^1]: This requires bypassing certain parts of the bot (its cache) to get up-to-date information, hence the slowdown.
+[^2]: If users are offline on Xbox Live, their device won't appear. There may be settings that also make the user not share their current game details.
+[^3]: It must be accepted through PayPal or Stripe.

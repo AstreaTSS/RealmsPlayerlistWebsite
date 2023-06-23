@@ -7,7 +7,7 @@ description: A guide on how to set up the Realms Playerlist Bot.
 
 Setting up the bot is easy. You'll just need:
 - A Discord server.
-- The Realm code. If you don't have one for your Realm, you'll need one at least temporarily.
+- The Realm code. If you don't have one for your Realm, you'll need one at least temporarily.[^1]
 - If you wish to have the auto-ran playerlist, then you'll need a channel where the bot can send that information to ready.
 
 ## Steps
@@ -26,3 +26,5 @@ If you just want the invite link for the version hosted by me, you can use:
 
 - https://sh.astrea.cc/inviteplayerlist
 - If you don't trust that link (it's just a shortened link for the following, but still), you can use the raw Discord link: https://discord.com/api/oauth2/authorize?client_id=725483868777611275&permissions=309238025280&scope=applications.commands%20bot
+
+[^1]: You can enable it, quickly add the bot and link the Realm, then quickly disable the Realm code. Not ideal, but there aren't many great alternatives.
