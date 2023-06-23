@@ -49,7 +49,7 @@ jobs:
     - name: Build the documentation
       run: mkdocs build
       env:
-        CF_ANALYTICS_TOKEN: ${{ env.CF_ANALYTICS_TOKEN }}
+        CF_ANALYTICS_TOKEN: ${{ vars.CF_ANALYTICS_TOKEN }}
 
     - name: HTML/CSS/JS Minifier
       uses: docker://devatherock/minify-js:1.0.3
