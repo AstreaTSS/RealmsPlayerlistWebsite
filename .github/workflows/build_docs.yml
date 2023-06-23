@@ -17,9 +17,6 @@ permissions:
 jobs:
   docs:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - uses: actions/checkout@v3
     
@@ -51,11 +48,11 @@ jobs:
       env:
         CF_ANALYTICS_TOKEN: ${{ vars.CF_ANALYTICS_TOKEN }}
 
-    - name: HTML/CSS/JS Minifier
-      uses: docker://devatherock/minify-js:1.0.3
-      with:
-        directory: "site"
-        add_suffix: false
+    # - name: HTML/CSS/JS Minifier
+    #   uses: docker://devatherock/minify-js:1.0.3
+    #   with:
+    #     directory: "site"
+    #     add_suffix: false
 
     - name: Publish to Cloudflare Pages
       uses: cloudflare/pages-action@1
