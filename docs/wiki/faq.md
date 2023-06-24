@@ -77,7 +77,7 @@ To reliably get the gamertag of the XUID shown, you can use `/gamertag-from-xuid
 
 ...yes, but I can only wish you luck. This thing is *far* from simple to get everything working, requiring you to know the ins-and-outs of most of the libraries I use.[^6] It can be a mess, and gathering the databases and servers needed even more so. There's also not much room for simplification here. If you do want to continue, it's best if you have a decent understanding at Python, PostgreSQL, Redis, and Sentry.io before trying this.
 
-[This Xbox API library](https://github.com/OpenXbox/xbox-webapi-python) is a good place to start researching on how it all works, as you'll need it to generate tokens to authenticate. Everything the bot uses can be gotten for free in some way, shape, or form.[^7]
+For the Xbox/Realm related parts, [this Xbox API library](https://github.com/OpenXbox/xbox-webapi-python)'s little introduction section (up to "Dependencies") should tell you the first steps of what to do - [this little script](https://github.com/AstreaTSS/RealmsPlayerlistBot/blob/main/xbox_authenticate.py) included in the source code of the bot can do the rest (once you install dependecies for the bot). In general, everything the bot uses can be gotten for free in some way, shape, or form.[^7]
 
 Little support will be given for self-hosters (not trying to sound cruel, but it takes away at my time. That being said, if you know what you're doing, I can help you with troubleshooting). I *do* plan on making a guide on how to host it eventually though.
 
@@ -91,14 +91,16 @@ Note that Python is *not* like Javascript, the most popular language for making 
 
 A lot of reasons:
 - The Xbox/Realm API (they're essentially the same thing, being made by Microsoft) is a pain to work with. There's a reason why people have made tools like [OpenXBL](https://xbl.io/) or [XAPI](https://xapi.us/) - there's a lot of pain points when it comes to *just authenticating into the APIs themselves*, and it's a lot easier to just let someone else do that work[^9]. Unforunately, it comes at a speed cost, and also has limits that would be too restrictive for Playerlist[^10]. Instead, we do everything ourselves, adding a lot of complexity.
-  - Now, [there is an Xbox API library made in Python](https://github.com/OpenXbox/xbox-webapi-python), as discussed in an earlier question, and it does help shed some light on how the whole process works. However, that library is very obtuse (having several questionable design choices that go against the core of Python)[^11] and is slower than it could be for many reasons[^12], so I've had to make mini-libraries in the bot itself that do it better. The library is still used, but mostly for a couple of convenience functions these days, and soon it will be removed entirely. Of course, it doesn't handle the Realms API either.
+  - Now, [there is an Xbox API library made in Python](https://github.com/OpenXbox/xbox-webapi-python), as discussed in an earlier question, and it does help shed some light on how the whole process works. However, that library is very obtuse (having several questionable design choices)[^11] and is slower than it could be for many reasons[^12], so I've had to make mini-libraries in the bot itself that do it better. Of course, it doesn't handle the Realms API either, though that's not its fault.
   - Even *when* you log in, the Xbox/Realm API is just a mess. A lot of inconsistency with capitalization that makes it a pain to parse, lots of undocumented fields and behaviors (90% of the bot's code uses undocumented endpoints), and general inconsistency with the results you get. I very much sense Microsoft made the API when they were new to making APIs, and is unable to improve it due to how many things that would break.[^13] That and they really do not like simple authentication.
   - Oh yeah, the APIs just *fail* sometimes. Like, it's a completely normal thing and you can't do anything about it.[^14]
 - There's a lot of processing involved. Not just with the APIs, but also with the data gotten from it - it all eventually has to be converted into a format that is usable by the bot, which takes some effort. It also has to be *fast*, which takes even more effort to do (speed is the reason Redis is used, for example).[^15]
 - Even when the data is stored, it has to be turned into a human-friendly format, which takes yet more work. It's more complex than you think.[^16]
 - Some pains were taken to make the commands more user-friendly at the exchange of more complex code. It's just how it is.
 
-[^1]: Yes, the bot polls the service *every minute*. Mojang seems fine with it for my bot specifically, but be careful about doing this for your own projects.
+[^1]:
+    Yes, the bot polls the service *every minute*. Mojang seems fine with it for my bot specifically, but be careful about doing this for your own projects - the
+    account behind the bot has been banned before for this very reason.
 [^2]:
     To be more specific: every Realm has a thing called a "club", which is used to store photos and messgaes in the activity log of the Realm. The bot can usually
     exploit this to gain past data, though clubs are a weird thing.
@@ -115,15 +117,10 @@ A lot of reasons:
 [^8]: This line was added more for self-hosters so that they know what they're getting into more than anything.
 [^9]: There are no tools like the two listed for the Realms API.
 [^10]: OpenXBL is still used as a fallback because of how... weird the Xbox API can be.
-[^11]: 
-    Python has a certain recommended coding style that is different from other languages - you can find this out through [PEP 8](https://peps.python.org/pep-0008/)
-    and [PEP 20](https://peps.python.org/pep-0020/). In my opinion `xbox-webapi-python` violates this at many points, laregly with how complex it is. The imports are
-    way too messy and the library is very unintuitive, to the point where it is near unusable without looking in the code and studying it itself. Though I shouldn't
-    be too harsh on the library - once you actually make the request, the results are wonderfully done, and it did the task of actually making the Xbox API usable in
-    the first place.
+[^11]: Purely my opinion, I know, but it is seriously one of the worst libraries I have used development-wise because of how it is designed. Not like it's used anymore.
 [^12]: 
-    Namely with its lack of support for `orjson`, which is `json` but *much* faster, its usage of `httpx` over `aiohttp` (granted, `httpx` has a better UX),
-    and its bloated design.
+    Namely with its lack of support for `orjson` or any alternative to the very slow `json`, its usage of `httpx` over `aiohttp` (granted, `httpx` has a better UX),
+    and its overall bloated design.
 [^13]: Perhaps this is too nice of an assumption - even their more recent additions have the same issue.
 [^14]: By all means, any API is bound to have 5XX errors every once in a while. It's a *daily* occurance for the Xbox/Realms API.
 [^15]: Speed is also why the bot *has* a Premium tier - there's no way I could offer those benefits at scale with the speeds the bot has right now.
