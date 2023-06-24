@@ -51,13 +51,25 @@ repo_url: https://github.com/AstreaTSS/RealmsPlayerlistBot
 repo_name: AstreaTSS/RealmsPlayerlistBot
 
 copyright: >
-  &copy Copyright 2020-present AstreaTSS –
-  <a href="#__consent">Change cookie settings</a>
+  &copy Copyright 2020-present AstreaTSS
 extra:
   social:
-    - icon: fontawesome/brands/github 
+    - icon: fontawesome/solid/cookie
+      link: "#__consent"
+      name: Change Cookie Settings
+    - icon: custom/topgg
+      link: https://top.gg/bot/725483868777611275
+      name: Top.gg Page
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/NSdetwGjpK
+      name: Support Server
+    - icon: simple/kofi
+      link: https://ko-fi.com/astreatss
+      name: Ko-Fi Page
+    - icon: fontawesome/brands/github
       link: https://github.com/AstreaTSS/RealmsPlayerlistWebsite
-      name: Website source on github.com
+      name: Website Source
+    
   consent:
     title: Cookie consent
     description: >- 
@@ -99,3 +111,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tilde
   - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
