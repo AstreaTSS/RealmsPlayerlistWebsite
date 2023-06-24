@@ -5,7 +5,7 @@ hide:
 ---
 
 <figure markdown>
-  ![Realm Playerlist Bot's banner.](_static/rpl_banner.png){ width="700" loading="lazy"}
+  ![Realm Playerlist Bot's banner.](_static/rpl_banner.min.jpg){ width="700"}
 </figure>
 
 <p align="center">
@@ -109,7 +109,7 @@ Through an extra toggle, the bot can fetch and display device information whenev
 For example, `/online` becomes this:
 
 <figure markdown>
-  ![Picture on how `/online` looks when the toggle is enabled.](_static/realm_chart.png){ width="420" loading="lazy"}
+  ![Picture on how `/online` looks when the toggle is enabled.](_static/fetch_devices.png){ width="420" loading="lazy"}
 </figure>
 
 This does slow the bot down a bit when fetching the device[^7], and privacy settings may make some users not have information regardless[^8], but can used as an extra moderation/statistical tool.
