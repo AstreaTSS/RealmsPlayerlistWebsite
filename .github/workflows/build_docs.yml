@@ -28,6 +28,7 @@ jobs:
       with:
         githubToken: ${{ secrets.GITHUB_TOKEN }}
         compressOnly: true
+        ignorePaths: "docs/_static/live_online_list.webp"
 
     - name: Set up Python environment
       uses: actions/setup-python@v4
