@@ -97,7 +97,7 @@ Instead of making the bot send a summary of people on every hour, a **live playe
 It looks something like this:
 
 <figure markdown>
-  ![Picture on how live playerlist looks like.](_static/live_playerlist.png){ width="500" loading="lazy"}
+  ![Picture on how live playerlist looks like.](_static/live_playerlist.png){ width="420" loading="lazy"}
 </figure>
 
 This has a variety of uses, from statistical to moderation - it's really up to you what you do with this information. Some Realms use it both to narrow down subjects to a precise degree while also tracking active Realm times. Using Discord's search functionality, the possibilities are near endless.
