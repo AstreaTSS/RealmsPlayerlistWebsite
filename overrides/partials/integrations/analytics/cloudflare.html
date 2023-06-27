@@ -3,5 +3,15 @@
 {% endif %}
 
 {% if property %}
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ property }}"}'></script>
+  <script id="__analytics">
+    function __md_analytics() {
+      var script = document.createElement("script");
+      script.defer = true;
+      script.src = "https://static.cloudflareinsights.com/beacon.min.js";
+      script.setAttribute("data-cf-beacon", '{"token": "{{ property }}"}');
+
+      var container = document.getElementById("__analytics")
+      container.insertAdjacentElement("afterEnd", script)
+    }
+  </script>
 {% endif %}
