@@ -23,6 +23,18 @@ This has a variety of uses, from statistical to moderation - it's really up to y
 
 Of course, this is more spammy than the summary given every hour, and also *replaces the autorunner version entirely.* The `/playerlist` command will still be available to you, though, and the benefits most likely outweigh the downsides for you.
 
+### Live Online List
+
+Taking the live playerlist to its logical conclusion, a **live online list** is a message that constantly updates with the players currently on the Realm, as seen below:
+
+<figure markdown>
+  ![Animated picture on how the live online list looks like.](../../_static/live_online_list.webp){ width="500" loading="lazy"}
+</figure>
+
+Simply send with `/premium send-live-online-list` and you should be good to go.
+
+As of right now, this feature requires the live playerlist to also be enabled.
+
 ### Device Information
 
 Through an extra toggle (`/premium fetch-devices`), the bot can fetch and display device information whenever a user is online. This affects `/online`, the normal playerlist, and the live playerlist.

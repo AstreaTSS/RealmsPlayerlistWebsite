@@ -97,10 +97,20 @@ Instead of making the bot send a summary of people on every hour, a **live playe
 It looks something like this:
 
 <figure markdown>
-  ![Picture on how live playerlist looks like.](_static/live_playerlist.png){ width="420" loading="lazy"}
+  ![Picture on how live playerlist looks like.](_static/live_playerlist.png){ width="500" loading="lazy"}
 </figure>
 
 This has a variety of uses, from statistical to moderation - it's really up to you what you do with this information. Some Realms use it both to narrow down subjects to a precise degree while also tracking active Realm times. Using Discord's search functionality, the possibilities are near endless.
+
+#### Live Online List
+
+Taking the live playerlist to its logical conclusion, a **live online list** is a message that constantly updates with the players currently on the Realm, as seen below:
+
+<figure markdown>
+  ![Animated picture on how the live online list looks like.](_static/live_online_list.webp){ width="500" loading="lazy"}
+</figure>
+
+As of right now, this feature requires the live playerlist to also be enabled.
 
 #### Device Information
 
