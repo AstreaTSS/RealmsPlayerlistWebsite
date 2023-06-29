@@ -4,7 +4,7 @@ description: The privacy policy for the Realms Playerlist Bot.
 
 # Privacy Policy
 
-*Last updated: 01/05/2022 (MM/DD/YYYY).*
+*Last updated: 2023-06-29 (YYYY-MM-DD).*
 
 This document contains the privacy policy and agreement you accept when adding the below mentioned Bot to a server, or use them as a member of a Server. This document does not supersede any of the terms laid out by Discord.
 
@@ -63,9 +63,11 @@ All data is stored on protected infrastructure. While storage methods may vary b
 Data collected via command, meaning collected via explicit understanding that the data is going to be saved (cache), is retained for as long as the instance of the Bot runs or until it is cleared to make room. Other data retained is as follows:
 
 #### Server Configuration
+
 The Bot stores information relating to a Server's configuration. This information is automatically deleted if it leaves a Server, but is otherwise indefinitely kept.
 
 #### Gamertags
+
 The Bot uses Redis/a cache in order to store a link between "XUID", the way Xbox Services denotes its Users, and a "Gamertag", a human-friendly way of referring to said User. Entries are automatically deleted after 14 days.
 
 #### Realm Player Session Activity
@@ -76,7 +78,7 @@ The Bot uses Xbox Services in order to track Players on Realms, and stores it pe
 
 Pursuant to various jurisdictions, you have the right to request a machine-readable copy of your data for portability's sake and the right to have your data deleted from the Service.
 
-Should you wish to enforce one of these rights, please send a private message to any developer mentioned on our [Discord server](https://discord.gg/NSdetwGjpK) - we will strive to respond to your request within 30 days.
+Should you wish to enforce one of these rights, please send an email to [discord@astrea.cc](mailto:discord@astrea.cc) - we will strive to respond to your request within 30 days.
 
 ## Children's Privacy
 
