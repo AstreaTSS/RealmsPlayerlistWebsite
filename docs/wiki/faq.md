@@ -22,23 +22,25 @@ When you initially link your server to a Realm though, it uses a different metho
 
 Nope. This uses Realm-specific services. For servers (both editions), you can get away with plugins/mods; for Java Edition, there *is* a Java Realm service that someone could use if they're interested enough.
 
-### What about the Realm Bot?
+### What about other Realm-based bots? Why should I use your bot?
 
-[I'm referring to this bot](https://realmbot.dev/), by the way. We're officially partnered with them too, check them out!
+First off: *The Playerlist Bot is not a direct competitor to those bots.* You can think of this bot as a *companion* to your bot of choice. In fact, on the support server, we're partnered with a couple - check them out there!
 
-Anyways, that bot is great - it's a bot that can *massively* help out any Realm owners, and I won't deny that. In fact, it even has its own version of the `/online` command this bot has, which can be a little bit more or less accurate at times for technical reasons.[^3]
+The Playerlist Bot does one thing very well - track and showcase the join/leaves of players. Not many bots do this on the level of the Playerlist Bot due to the sheer complexity of it all, and they likely won't do it at the *speed* the Bot does it at.
 
-However, the Realm Playerlist Bot is not a "remote Realms control" bot (unlike Realm Bot). As the name suggest, the Playerlist Bot is a *tracking* bot, meant to take care of the workload of tracking players for whatever reasons you need. The Realm Bot cannot do anything like this, and so you can treat this bot as a *companion* to it, not a competitor.
+Most bots instead either focus on more direct means of moderation (IE providing global banlists), controlling and viewing the Realm from Discord itself, or both. They're all great bots because of those features, but those features don't devalue the Playerlist Bot.
 
-I have doubts that the Realm Bot will be able to do what this bot does because of how complex it is. Regardless, use what you want to use, and there's no harm in having both.
+It's also worth noting:
+- This bot *does not* require using your or an alternate account to do its job. It uses a single bot-owned account to do its work instead, and doesn't even take up a player slot being on the Realm itself.
+- The bot is open source under the GNU General Public License v3.0[^3], and *will* always be open source. In general, the bot promotes collaboration with whoever it can find, and is the reason we have partnerships with other bots.
 
 ### Why can't it track a Realm's chat?
 
 A couple of reasons:
-- It's a bit difficult. There is a way out there, but it currently only works for *one single Realm-to-Discord server combination* unless you do a number of things to work around it. It's a huge time investment to make it work, and it would change how the bot is used by a decent bit.
+- It's difficult (at least with the programming language I'm using). It's a huge time investment to make it work, and it would change how the bot's fundamentals a decent bit.
 - Even if I *do* get it to work, it requires a dummy account to *always* be on the Realm, thus taking up a player space. This is something I'm against doing ever.[^4]
 - Frankly, it's out of scope for the bot. It would be nice, but the bot mostly tracks player join/leaves in order to not reinvent the wheel and allow for easier maintainability (the bot is largely written by one person, so maintainability is key).
-- [The Realm Bot](https://realmbot.dev/) offers this feature in its premium version.
+- Many other bots, like [the Realm Bot](https://realmbot.dev/) and [Cosmos](https://cosmosbot.dev/), offer this feature (usually through a premium version or with restrictions).
 
 ### Can I link multiple Realms to one Discord server? Can I have two playerlist channels, each one being linked to a different Realm?
 
@@ -104,10 +106,12 @@ A lot of reasons:
 [^2]:
     To be more specific: every Realm has a thing called a "club", which is used to store photos and messgaes in the activity log of the Realm. The bot can usually
     exploit this to gain past data, though clubs are a weird thing.
-[^3]: The Playerlist Bot caches (stores a local copy that is faster to retrieve than fetching from the original source) data, while Realm Bot does not.
+[^3]:
+    This very website is *also* open source, under MIT, [as you can see on the GitHub page](https://github.com/AstreaTSS/RealmsPlayerlistWebsite). Only the Premium
+    Dashboard for this bot *isn't* open source yet, and that's because it's an experimental project that has security involved. Can you tell I like open source?
 [^4]:
     Not because it's a horrible idea or anything. In fact, the Realm Bot does it for its premium service. I just rather provide services that don't need a player
-    on for convenience's (for you and me) sake.
+    on for convenience's (for you and me) sake and to distinguish the Playerlist Bot from other bots.
 [^5]: Though the system post-discriminators does mean there's only one @Hawk - still, an ID is easier for programs to use for various reasons (computers love numbers).
 [^6]: "Ins-and-outs" may be the wrong word here. The bot just requires decent knowledge of Python in general.
 [^7]:
