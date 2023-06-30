@@ -67,6 +67,7 @@ There are two ways of buying it:
         - *This method is experimental.* It should work, though there may be a few hiccups on the way.
         - This method uses Stripe exclusively for payment.
         - Payment is locked at $2 a month, and only grants two codes. If you would like to pay/get more, use the Ko-Fi method for now.
+        - You can manage the subscription through the [Premium Dashboard](https://rpldash.astrea.cc/premium/).
 
     1. Head over to the [Premium Dashboard](https://rpldash.astrea.cc/premium/). Fancy, right? Regardless, *this page is where you can get and manage Premium if you use this method.*
     
@@ -89,6 +90,7 @@ There are two ways of buying it:
         - *This method is janky.* No better way to put it - Ko-Fi was *not* meant to handle bot subscriptions, and so some workarounds have to be used. It's why the other method is recommended these days.
         - This method uses Paypal or Stripe, and can accept direct payment from banks because of it.
         - *This method requires you stay in my support server for Premium to keep working.*
+        - You can manage the subscription through [Ko-Fi](https://ko-fi.com) itself.
 
     1. Head over to [my Ko-Fi page](https://ko-fi.com/astreatss) and where it says "Support Astrea", you should see options to do either a one-time purchase or for a membership. Click on the membership tag, and proceed to join the "Realms Playerlist Premium" tier, setting up your payment source and all.
 
