@@ -40,7 +40,7 @@ A couple of reasons:
 - It's difficult (at least with the programming language I'm using). It's a huge time investment to make it work, and it would change how the bot's fundamentals a decent bit.
 - Even if I *do* get it to work, it requires a dummy account to *always* be on the Realm, thus taking up a player space. This is something I'm against doing ever.[^4]
 - Frankly, it's out of scope for the bot. It would be nice, but the bot mostly tracks player join/leaves in order to not reinvent the wheel and allow for easier maintainability (the bot is largely written by one person, so maintainability is key).
-- Many other bots, like [the Realm Bot](https://realmbot.dev/) and [Cosmos](https://cosmosbot.dev/), offer this feature (usually through a premium version or with restrictions).
+- Many other bots, like [the Realm Bot](https://realmbot.dev/), offer this feature (usually through a premium version or with restrictions).
 
 ### Can I link multiple Realms to one Discord server? Can I have two playerlist channels, each one being linked to a different Realm?
 
