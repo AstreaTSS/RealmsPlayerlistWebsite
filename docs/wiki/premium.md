@@ -94,7 +94,7 @@ There are two ways of buying it:
 
     1. Head over to [my Ko-Fi page](https://ko-fi.com/astreatss) and where it says "Support Astrea", you should see options to do either a one-time purchase or for a membership. Click on the membership tag, and proceed to join the "Realms Playerlist Premium" tier, setting up your payment source and all.
 
-    2. Link your Discord account with Ko-Fi and join the "Astrea's Galaxy" Discord server. Annoyingly, Ko-Fi doesn't give me a good way of seeing how this step works, so bear with me and [consult this article as necessary](https://help.ko-fi.com/hc/en-us/articles/8664701197073-How-Do-I-Join-a-Creator-s-Discord-Server-).
+    2. Link your Discord account with Ko-Fi and join the "Stellarium Labs" Discord server. Annoyingly, Ko-Fi doesn't give me a good way of seeing how this step works, so bear with me and [consult this article as necessary](https://help.ko-fi.com/hc/en-us/articles/8664701197073-How-Do-I-Join-a-Creator-s-Discord-Server-).
 
         - You do need to make a Ko-Fi account to do all of this - if you don't have one and your purchase Premium, you should get an email that'll allow you to create an account.
         - Ko-Fi may give you a prompt to join the Discord server right after you purchase Premium. If so, that's great! Just click that button. Otherwise, you can find a "Connect to Discord & Claim" button on my Ko-Fi page, or you can find it your "Payments and Orders" tab.
@@ -111,7 +111,7 @@ There are two ways of buying it:
 
     And you're done! Some Premium features may still need to be enabled afterwards - for example, the live playerlist needs to be enabled by `/premium live-playerlist` before it'll start working. You can check that you still have Premium by using `/config info`.
 
-    **As noted earlier: For this specific method, if you ever leave "Astrea's Galaxy", you'll lose Premium immediately.** Sorry, just a limitation with how I verify you're still subscribed to the membership tier.
+    **As noted earlier: For this specific method, if you ever leave "Stellarium Labs", you'll lose Premium immediately.** Sorry, just a limitation with how I verify you're still subscribed to the membership tier.
 
 [^1]: This requires bypassing certain parts of the bot (its cache) to get up-to-date information, hence the slowdown.
 [^2]: If users are offline on Xbox Live, their device won't appear. There may be settings that also make the user not share their current game details.
