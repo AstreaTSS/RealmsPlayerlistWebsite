@@ -32,7 +32,7 @@ Most bots instead either focus on more direct means of moderation (IE providing 
 
 It's also worth noting:
 - This bot *does not* require using your or an alternate account to do its job. It uses a single bot-owned account to do its work instead, and doesn't even take up a player slot being on the Realm itself.
-- The bot is open source under the GNU General Public License v3.0[^3], and *will* always be open source. In general, the bot promotes collaboration with whoever it can find, and is the reason we have partnerships with other bots.
+- The bot is open source under the GNU Affero General Public License v3.0[^3], and *will* always be open source. In general, the bot promotes collaboration with whoever it can find, and is the reason we have partnerships with other bots.
 
 ### Why can't it track a Realm's chat?
 
@@ -107,7 +107,7 @@ A lot of reasons:
     To be more specific: every Realm has a thing called a "club", which is used to store photos and messgaes in the activity log of the Realm. The bot can usually
     exploit this to gain past data, though clubs are a weird thing.
 [^3]:
-    This very website is *also* open source, under MIT, [as you can see on the GitHub page](https://github.com/AstreaTSS/RealmsPlayerlistWebsite). Only the Premium
+    This very website is *also* open source, under Apache License 2.0, [as you can see on the GitHub page](https://github.com/AstreaTSS/RealmsPlayerlistWebsite). Only the Premium
     Dashboard for this bot *isn't* open source yet, and that's because it's an experimental project that has security involved. Can you tell I like open source?
 [^4]:
     Not because it's a horrible idea or anything. In fact, the Realm Bot does it for its premium service. I just rather provide services that don't need a player
