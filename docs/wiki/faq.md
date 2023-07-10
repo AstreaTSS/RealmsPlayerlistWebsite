@@ -79,7 +79,7 @@ To reliably get the gamertag of the XUID shown, you can use `/gamertag-from-xuid
 
 ...yes, but I can only wish you luck. This thing is *far* from simple to get everything working, requiring you to know the ins-and-outs of most of the libraries I use.[^6] It can be a mess, and gathering the databases and servers needed even more so. There's also not much room for simplification here. If you do want to continue, it's best if you have a decent understanding at Python, PostgreSQL, Redis, and Sentry.io before trying this.
 
-For the Xbox/Realm related parts, [this Xbox API library](https://github.com/OpenXbox/xbox-webapi-python)'s little introduction section (up to "Dependencies") should tell you the first steps of what to do - [this little script](https://github.com/AstreaTSS/RealmsPlayerlistBot/blob/main/xbox_authenticate.py) included in the source code of the bot can do the rest (once you install dependecies for the bot). In general, everything the bot uses can be gotten for free in some way, shape, or form.[^7]
+For the Xbox/Realm related parts, [my custom Xbox/Bedrock Realms library](https://github.com/AstreaTSS/elytra-ms)'s little introduction section (up to "Dependencies") should tell you what to do (worth noting that the oauth file you get from `elytra-authenticate` needs to be named `tokens.json` for backwards compatibility). In general, everything the bot uses can be gotten for free in some way, shape, or form.[^7]
 
 Little support will be given for self-hosters (not trying to sound cruel, but it takes away at my time. That being said, if you know what you're doing, I can help you with troubleshooting). I *do* plan on making a guide on how to host it eventually though.
 
