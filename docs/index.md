@@ -81,8 +81,6 @@ You can make cool graphs about your Realm and its users:
 
 There are a variety of options to chose from, from the graph up above to a day-to-day breakdown. The data isn't 100% accurate, but you can use it to observe patterns... or just show it off for fun.
 
-Free users have limited options that only go back 7 days at most. Premium users can go all the way back to 30 days and have more options for data to graph.
-
 ### Premium
 
 **Realms Playerlist Premium** allows for extra features that otherwise could not be provided by the bot without funding. [Take a closer look at Premium here.](wiki/premium)
@@ -121,9 +119,7 @@ For example, `/online` becomes this:
 
 This does slow the bot down a bit when fetching the device[^7], and privacy settings may make some users not have information regardless[^8], but can used as an extra moderation/statistical tool.
 
-#### More Options For Graphs
-
-As mentioned earlier, free users can only go back 7 days for their graphs, and have limited options on how it can be graphed. With Premium, users can go back 30 days and graph in a variety of ways.
+This is also available as a toggle to non-Premium users of `/online` (and only `/online`) if they vote for the bot.
 
 ## Adding The Bot
 

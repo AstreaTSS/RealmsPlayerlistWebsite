@@ -47,9 +47,7 @@ For example, `/online` becomes this:
 
 This does slow the bot down a bit when fetching the device[^1], and privacy settings may make some users not have information regardless[^2], but can used as an extra moderation/statistical tool.
 
-### More Options For Graphs
-
-As mentioned earlier, free users can only go back 7 days for their graphs, and have limited options on how it can be graphed. With Premium, users can go back 30 days and graph in a variety of ways.
+This is also available as a toggle to non-Premium users of `/online` (and only `/online`) if they vote for the bot.
 
 ## How to Get Playerlist Premium
 
