@@ -101,7 +101,7 @@ There are two ways of buying it:
         - If you wait a couple of minutes and get the "Playerlist Premium Supporter" role, you're all set for the next step!
         - Please consult the article linked at the very beginning of this page if you have any problems.
 
-    3. Once you get the "Playerlist Premium Supporter" role, you should be able to see the channel "`〉playerlist-premium-support`" under the "Technical Side" category (where all of the bot channels are). Click on that and open a ticket, explaining that you want to get a code.
+    3. Once you get the "Playerlist Premium Supporter" role, you should be able to see the channel "`〉playerlist-premium-support`" under the "Supporters" category. Click on that and open a ticket, explaining that you want to get a code.
 
     4. Wait for Astrea/me to respond and give you a code. **Save this code somewhere safe.** Also note that this code is tied to you *specifically*, and only you can use it.
 
