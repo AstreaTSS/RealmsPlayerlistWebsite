@@ -3,7 +3,7 @@ description: A guide on how to set up the Realms Playerlist Bot.
 ---
 
 
-# Server Setup
+# Server Setup Guide
 
 Setting up the bot is easy. You'll just need:
 - A Discord server.
