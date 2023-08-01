@@ -47,8 +47,8 @@ class CustomSocialPlugin(SocialPlugin):
             path = os.path.join(config.docs_dir, theme["logo"])
 
             # Allow users to put the logo inside their custom_dir (theme["logo"] case)
-            if self.custom_dir:
-                custom_dir_logo = os.path.join(self.custom_dir, theme["logo"])
+            if theme.custom_dir:
+                custom_dir_logo = os.path.join(theme.custom_dir, theme["logo"])
                 if os.path.exists(custom_dir_logo):
                     path = custom_dir_logo
 
@@ -75,8 +75,8 @@ class CustomSocialPlugin(SocialPlugin):
         path = f"{base}/.icons/{logo}.svg"
 
         # Allow users to put the logo inside their custom_dir (theme["icon"]["logo"] case)
-        if self.custom_dir:
-            custom_dir_logo = os.path.join(self.custom_dir, ".icons", f"{logo}.svg")
+        if theme.custom_dir:
+            custom_dir_logo = os.path.join(theme.custom_dir, ".icons", f"{logo}.svg")
             if os.path.exists(custom_dir_logo):
                 path = custom_dir_logo
 
