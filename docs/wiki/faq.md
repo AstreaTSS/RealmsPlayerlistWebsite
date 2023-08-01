@@ -63,7 +63,7 @@ Well, this could be due to a number of reasons:
 
 ### There's a user called "Account with XUID (insert numbers here)" on the list. Who's that?
 
-Well, that happens when the bot fails to convert what can essentially be called Xbox's IDs into its respective gamertag. Let me explain.
+Well, it's first worth explaining that that happens when the bot fails to convert what can essentially be called Xbox's IDs into its respective gamertag. Let me explain.
 
 You may have heard of a Discord ID - it's a bunch of numbers that represents a thing on Discord, like a user, a channel, or a role (we'll be focusing on users). These numbers are useful because trying to use names means we can have conflicts - there's *definitely* more than one user named "Hawk" out there[^5], after all. Instead of referring to a user by name, Discord tools (and Discord itself) refers to users by their ID, with their usernames basically being a thing only people see.
 
@@ -72,6 +72,12 @@ A similar concept is present in Xbox Live, which is used a lot with Realms (and 
 The methods the bot uses to keep track of people gets the *XUIDs* of people. This isn't useful for most people, though, and so the bot has to find out what a person's gamertag is based off their XUID. While this resolving works *most* of the time, there are times where it fails, which is when this question comes into play.
 
 To reliably get the gamertag of the XUID shown, you can use `/gamertag-from-xuid`, which uses several (possibly slow, and so not used in the bot at large) methods to make sure you actually get the gamertag.
+
+### The bot displays an "Unknown Player" on the list. Who's that?
+
+There's a variety of people it could be - "Unknown Player" is used when the bot is unable to get *any* information on a player, even their Xbox ID. This most often happens because said player is a *subclient* - basically, whenever a player uses splitscreen to let another player play on the same device, then the player that's not the host is a subclient. Subclients are impossible to track with the means the bot uses - they don't have Xbox IDs (with Mojang giving them an unhelpful placeholder of "0", not even identifying who they're subclienting off of), and they don't have gamertags. They're just... there.
+
+Of course, there could be other reasons why that appeared (IE bugs), but those are rarer.
 
 ## Technical
 
