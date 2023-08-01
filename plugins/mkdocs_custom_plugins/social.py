@@ -22,12 +22,15 @@ class CustomSocialPlugin(SocialPlugin):
         return image
     
     def _load_logo(self, config):
+        theme = config.theme
+
         if logo := self.config.cards_layout_options.get("logo"):
             path = os.path.join(self.docs_dir, logo)
             _, extension = os.path.splitext(path)
 
-            if self.custom_dir:
-                custom_dir_logo = os.path.join(self.custom_dir, logo)
+            # Allow users to put the logo inside their custom_dir (theme["logo"] case)
+            if theme.custom_dir:
+                custom_dir_logo = os.path.join(theme.custom_dir, theme["logo"])
                 if os.path.exists(custom_dir_logo):
                     path = custom_dir_logo
 
@@ -37,8 +40,6 @@ class CustomSocialPlugin(SocialPlugin):
 
             # Load PNG, JPEG, etc.
             return Image.open(path).convert("RGBA")
-
-        theme = config.theme
 
         # Handle images (precedence over icons)
         if "logo" in theme:
