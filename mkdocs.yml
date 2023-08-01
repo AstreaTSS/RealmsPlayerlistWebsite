@@ -88,6 +88,8 @@ plugins:
       cards_layout_options:
         background_color: "#b05bff1E"
         background_image: _static/social_card_bg.png
+  - microsoft-verify:
+      id: !ENV [MICROSOFT_APPLICATION_ID, ""]
   - autorefs
   - awesome-pages
   - git-revision-date-localized:

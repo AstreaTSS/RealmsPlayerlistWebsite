@@ -50,6 +50,7 @@ jobs:
       run: mkdocs build
       env:
         CF_ANALYTICS_TOKEN: ${{ vars.CF_ANALYTICS_TOKEN }}
+        MICROSOFT_APPLICATION_ID: ${{ vars.MICROSOFT_APPLICATION_ID }}
 
     - name: Publish to Cloudflare Pages
       uses: cloudflare/pages-action@1
