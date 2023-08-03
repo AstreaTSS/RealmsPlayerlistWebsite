@@ -27,7 +27,7 @@ hide:
 It's:
 - 🚀 **Fast:** Under the right (and typical) circumstances[^1], it can generate a list of ~300 players in under *4 seconds,* 3-3.5 of which is only due to Discord's rate limits.[^2]
 - 📊 **Informative:** The main feature of the bot, the playerlist, can give a detailed log of players on a Realm at a moment's notice. You can also get a breakdown for an individual player to analyze as you wish.[^3]
-- 👌 **Easy to Use**: Simply add the bot, link your Realm, and you already have join/leave tracking enabled - no need to sign into and use an Xbox account. Take a look at the [Server Setup Guide](wiki/server_setup) for more information.
+- 👌 **Easy to Use**: Simply add the bot, link your Realm, and you already have join/leave tracking enabled - no need to sign into and use an Xbox account. Take a look at the [Server Setup Guide](server_setup.md) for more information.
 - 🔓 **Open Source**: The code is available to the public and able to be audited and learned from. Dedicated users can even (try to[^4]) self-host the bot, if they wish.
 
 ## Features
@@ -83,7 +83,7 @@ There are a variety of options to chose from, from the graph up above to a day-t
 
 ### Premium
 
-**Realms Playerlist Premium** allows for extra features that otherwise could not be provided by the bot without funding. [Take a closer look at Premium here.](wiki/premium)
+**Realms Playerlist Premium** allows for extra features that otherwise could not be provided by the bot without funding. [Take a closer look at Premium here.](premium.md)
 
 #### Live Playerlist
 
@@ -123,11 +123,11 @@ This is also available as a toggle to non-Premium users of `/online` (and only `
 
 ## Adding The Bot
 
-If you wish to add this bot, just [use the Server Setup Guide on how to do so](wiki/server_setup). It'll give a basic rundown on how to set up the bot, as well as showing how to set basic options.
+If you wish to add this bot, just [use the Server Setup Guide on how to do so](server_setup.md). It'll give a basic rundown on how to set up the bot, as well as showing how to set basic options.
 
 ## FAQ
 
-There's a whole section in the wiki about this! [Check it out here](wiki/faq).
+There's a whole section in the wiki about this! [Check it out here](faq.md).
 
 [^1]:
     The bot relies on a cache to speed up certain parts of the playerlist - there's a rare chance that the bot's cache doesn't have any useful information in it when
@@ -139,7 +139,7 @@ There's a whole section in the wiki about this! [Check it out here](wiki/faq).
     part of the playerlist (as a list that big will not fit in one message) - the bot sleeps 0.2 seconds between messages to try not to trigger them, and Discord can
     still trigger them anyways, forcing the bot to wait longer. This test was also done with an old version which split the playerlist into shorter pieces than it should have.
 [^3]: Through `/get-player-log`.
-[^4]: This bot is *hard* to self-host due to the number of things it uses. Check out [this FAQ question](wiki/faq.html#can-i-self-host-this) for more information.
+[^4]: This bot is *hard* to self-host due to the number of things it uses. Check out [this FAQ question][can-i-self-host-this] for more information.
 [^5]: https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions
 [^6]:
     As the name of the feature suggests, it detects when your Realm goes *offline* - more accurately, it detects when the bot can't detect the Realm.

@@ -1,9 +1,10 @@
 wheel
-mkdocs-material
+mkdocs-material==9.2.0b2
 pillow
 cairosvg
-mkdocs-awesome-pages-plugin
+git+https://github.com/polymorcodeus/mkdocs-awesome-pages-plugin.git@790b3876a16c82632d3c4966c3be4b1319c710b8
 mkdocs-git-revision-date-localized-plugin
 mkdocs-autorefs
+mkdocs-autolinks-plugin
 mdx-breakless-lists
 mdx_truly_sane_lists

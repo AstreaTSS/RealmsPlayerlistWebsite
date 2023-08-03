@@ -38,7 +38,6 @@ theme:
     - navigation.expand
     - navigation.top
     - navigation.footer
-    - navigation.indexes
     - search.highlight
     - search.share
     - toc.follow
@@ -49,6 +48,22 @@ extra_css:
 
 repo_url: https://github.com/AstreaTSS/RealmsPlayerlistBot
 repo_name: AstreaTSS/RealmsPlayerlistBot
+
+nav:
+  - Wiki:
+    - wiki/server_setup.md
+    - wiki/premium.md
+    - wiki/faq.md
+  - Legal:
+    - legal/tos.md
+    - legal/privacy_policy.md
+    - legal/acknowledgements.md
+  - Updates:
+    - Posts: updates/index.md
+  - External Links:
+    - Support Server: https://discord.gg/NSdetwGjpK
+    - Top.gg Page: https://top.gg/bot/725483868777611275
+    - Discord Bot List Page: https://discordbotlist.com/bots/realms-playerlist-bot
 
 copyright: >
   &copy Copyright 2020-present AstreaTSS
@@ -91,7 +106,16 @@ plugins:
   - microsoft-verify:
       id: !ENV [MICROSOFT_APPLICATION_ID, ""]
   - autorefs
+  - autolinks
   - awesome-pages
+  - blog:
+      blog_dir: updates
+      archive: false
+      categories: false
+      draft_if_future_date: true
+      post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
