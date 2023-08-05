@@ -7,14 +7,30 @@ description: A guide on how to set up the Realms Playerlist Bot.
 
 Setting up the bot is easy. You'll just need:
 - A Discord server.
-- The Realm code. If you don't have one for your Realm, you'll need one at least temporarily.[^1]
+- Either the Realm code or ownership over the Realm.
 - If you wish to have the auto-ran playerlist, then you'll need a channel where the bot can send that information to ready.
 
 ## Steps
-1. Invite the bot to your Discord server. If you're using the version hosted by me/AstreaTSS, just [use this link to do so.](https://sh.astrea.cc/inviteplayerlist)
-2. Use `/config link-realm` to link your Realm to the server via the Realm code. Make sure to fill in the option for the Realm code (don't set `unlink`)!
-3. If you want the auto-ran playerlist, make sure the bot is able to read and send messages to the channel, then use `/config playerlist-channel`. Once again, make sure to fill in the option for the channel (don't set `unset`!).
-4. If you want to be pinged whenever the Realm goes down and/or crashes, use `/config realm-offline-role` (of course, don't set `unset`). That one will show you a prompt before actually setting it - pay attention to that!
+
+First, invite the bot to your Discord server. If you're using the version hosted by me/AstreaTSS, just [use this link to do so.](https://sh.astrea.cc/inviteplayerlist)
+
+There are two methods of linking the bot to your Realm from here, and they depend on your situation:
+
+=== "(RECOMMENDED) Realm Code"
+    !!! note "Realm Code Notes"
+        This method is recommended for most users, as it's the easiest to set up. This *requires* a Realm code to use.
+
+    Use `/config link-realm` to link your Realm to the server via the Realm code. Make sure to fill in the option for the Realm code (don't set `unlink`)!
+
+=== "Linking as Realm Owner"
+    !!! note "Linking as Realm Owner Notes"
+        This method requires the Realm owner to authenticate the bot with Microsoft/Xbox so the bot can link the Realm you want. Authentication data is not stored beyond the linkage process itself.
+
+    Use `/config alternate-link` to link your Realm to the server via the alternate method. This will start a setup process that will guide you through the process of linking the Realm. Make sure to read the prompts carefully!
+
+From here, the steps are the same for both methods:
+- If you want the auto-ran playerlist, make sure the bot is able to read and send messages to the channel, then use `/config playerlist-channel`. Once again, make sure to fill in the option for the channel (don't set `unset`!).
+- If you want to be pinged whenever the Realm goes down and/or crashes, use `/config realm-offline-role` (of course, don't set `unset`). That one will show you a prompt before actually setting it - pay attention to that!
 
 And that's it! If you got no errors, then you're all set. If you do, please follow the instructions they provide.
 
@@ -26,5 +42,3 @@ If you just want the invite link for the version hosted by me, you can use:
 
 - https://sh.astrea.cc/inviteplayerlist
 - If you don't trust that link (it's just a shortened link for the following, but still), you can use the raw Discord link: https://discord.com/api/oauth2/authorize?client_id=725483868777611275&permissions=309238025280&scope=applications.commands%20bot
-
-[^1]: You can enable it, quickly add the bot and link the Realm, then quickly disable the Realm code. Not ideal, but there aren't many great alternatives.

@@ -4,7 +4,7 @@ description: The privacy policy for the Realms Playerlist Bot.
 
 # Privacy Policy
 
-*Last updated: 2023-06-29 (YYYY-MM-DD).*
+*Last updated: 2023-08-04 (YYYY-MM-DD).*
 
 This document contains the privacy policy and agreement you accept when adding the below mentioned Bot to a server, or use them as a member of a Server. This document does not supersede any of the terms laid out by Discord.
 
@@ -38,6 +38,7 @@ The following data may be collected and temporarily stored when intentionally pr
 
 -   Server specific configuration settings.
 -   Data and content for the task called.
+  -   When using `/config alternate-link`, Microsoft authentication data is collected in order to link the Bot to a Realm. This data is only stored in memory, and disappears once the task is completed.
 
 #### Automatically Collected
 
