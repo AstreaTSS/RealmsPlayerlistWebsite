@@ -92,7 +92,7 @@
 
 .md-source-file__fact .md-icon {
   flex-shrink: 0;
-  margin-bottom: 0;
+  margin-bottom: 0.05rem;
 }
 
 .md-source-file__fact svg {
