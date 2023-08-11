@@ -24,7 +24,7 @@ There are two methods of linking the bot to your Realm from here, and they depen
 
 === "Linking as Realm Owner"
     !!! note "Linking as Realm Owner Notes"
-        This method requires the Realm owner to authenticate the bot with Microsoft/Xbox so the bot can link the Realm you want. Authentication data is not stored beyond the linkage process itself.
+        This method requires the Realm owner to authenticate the bot with Microsoft/Xbox so the bot can link the Realm you want. Authentication data is not stored beyond the link process itself, and only the bot's own account is used for actual functionality beyond this process.
 
     Use `/config alternate-link` to link your Realm to the server via the alternate method. This will start a setup process that will guide you through the process of linking the Realm. Make sure to read the prompts carefully!
 
