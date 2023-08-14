@@ -4,7 +4,7 @@ description: The privacy policy for the Realms Playerlist Bot.
 
 # Privacy Policy
 
-*Last updated: 2023-08-04 (YYYY-MM-DD).*
+*Last updated: 2023-08-14 (YYYY-MM-DD).*
 
 This document contains the privacy policy and agreement you accept when adding the below mentioned Bot to a server, or use them as a member of a Server. This document does not supersede any of the terms laid out by Discord.
 
@@ -38,7 +38,7 @@ The following data may be collected and temporarily stored when intentionally pr
 
 -   Server specific configuration settings.
 -   Data and content for the task called.
-  -   When using `/config alternate-link`, Microsoft authentication data is collected in order to link the Bot to a Realm. This data is only stored in memory, and disappears once the task is completed.
+  -   When using `/config alternate-link`, Microsoft authentication data is collected in order to link the Bot to a Realm. This data is only stored in memory, and disappears once the task is completed. A Microsoft application is also linked to your account with this command: after the task is completed, you may revoke access to the application at https://account.live.com/consent/Manage.
 
 #### Automatically Collected
 
@@ -46,6 +46,7 @@ This data may be collected automatically by some Services. This data is used to 
 
 -   Any data needed for standard operation of the Bot. This typically includes channel data and roles.
 -   Data relating to users via the Xbox Service, including any Minecraft-related data (e.g. information on when a Player was on a Realm).
+-   For Playerlist Premium, information about the Discord account who purchased it, the subscription ID, and the expiration date of the subscription is stored in the bot itself. This data is not shared with any third party, and is only used to verify the subscription. Stripe handles the payment process itself, including storing payment information - and their privacy policy can be found at https://stripe.com/privacy.
 
 ## Why We Collect Data
 
