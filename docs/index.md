@@ -121,7 +121,7 @@ This does slow the bot down a bit when fetching the device[^7], and privacy sett
 
 This is also available as a toggle to non-Premium users of `/online` (and only `/online`) if they vote for the bot.
 
-### Realm Session Export
+#### Realm Session Export
 
 You can export your Realm's session data (a session being a period of time where the player was on a Realm, including when they joined and were last seen) for around the last 30 days to a CSV file, which can be opened in a spreadsheet program like Excel or Google Sheets. This can be used to make your own graphs (though some fiddling around will be needed), or just to have the data for yourself.
 
