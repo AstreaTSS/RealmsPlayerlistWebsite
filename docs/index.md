@@ -25,7 +25,7 @@ hide:
 </p>
 
 It's:
-- 🚀 **Fast:** Under the right (and typical) circumstances[^1], it can generate a list of ~300 players in under *4 seconds,* 3-3.5 of which is only due to Discord's rate limits.[^2]
+- 🚀 **Fast:** Under the right (and typical) circumstances[^1], it can send a list of ~300 players in under *2 seconds,* most of which (~1.5 seconds) is spent just sending messages to Discord.[^2]
 - 📊 **Informative:** The main feature of the bot, the playerlist, can give a detailed log of players on a Realm at a moment's notice. You can also get a breakdown for an individual player to analyze as you wish.[^3]
 - 👌 **Easy to Use**: Simply add the bot, link your Realm, and you already have join/leave tracking enabled - no need to use your Xbox account for the bot's features. Take a look at the [Server Setup Guide](server_setup.md) for more information.
 - 🔓 **Open Source**: The code is available to the public and able to be audited and learned from. Dedicated users can even (try to[^4]) self-host the bot, if they wish.
@@ -139,13 +139,10 @@ There's a whole section in the wiki about this! [Check it out here](faq.md).
 
 [^1]:
     The bot relies on a cache to speed up certain parts of the playerlist - there's a rare chance that the bot's cache doesn't have any useful information in it when
-    the playerlist is generated, but... well, it's rare because the bot caches a lot quickly.
+    the playerlist is generated, but... well, it's rare because the bot caches a lot quickly. Also, a Premium feature (fetching device information) can slow down the bot.
 [^2]:
-    Admittedly, the test used to determine this wasn't very scientific, but the actual number for the speed of the playerlist is likely *lower*, not higher.
-    Essentially, I measured the time until the bot sends the first part of the calculated playerlist, which is both the time it takes for the bot to calculate it
-    *and* the time for the bot to make a web request to Discord to actually send the message (adding a considerable delay). The ratelimits come in when sending every
-    part of the playerlist (as a list that big will not fit in one message) - the bot sleeps 0.2 seconds between messages to try not to trigger them, and Discord can
-    still trigger them anyways, forcing the bot to wait longer. This test was also done with an old version which split the playerlist into shorter pieces than it should have.
+    During the tests I did to determine this fact, the bot spent around *0.5 seconds* from the time the command is recieved by the bot to actually gather and process the data into embeds.
+    The other ~1.5 seconds is literally spent sending the embeds to Discord (they have to be sent in separate messages due to their high character count) and nothing else.
 [^3]: Through `/get-player-log`.
 [^4]: This bot is *hard* to self-host due to the number of things it uses. Check out [this FAQ question][can-i-self-host-this] for more information.
 [^5]: https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions
