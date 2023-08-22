@@ -31,4 +31,4 @@ I won't list every dependency here, because GitHub does a good job of that. Chec
 
 [^1]: Bedrock Edition doesn't have great shader support, and I do not have a GPU capable of raytracing.
 [^2]: Though this library is not being used in the bot itself (anymore) - it was just inspiration.
-[^3]: Both libraries are used in the bot itself. orjson for general JSON support and msgspec when there's a known format in mind. As you can imagine, this is down to their speeds in those respective scenerios.
+[^3]: Both libraries are used in the bot itself. orjson for general JSON support and msgspec when there's a known format in mind. As you can imagine, this is down to their speeds in those respective scenarios.

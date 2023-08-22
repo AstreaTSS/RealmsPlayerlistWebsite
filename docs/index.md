@@ -141,13 +141,13 @@ There's a whole section in the wiki about this! [Check it out here](faq.md).
     The bot relies on a cache to speed up certain parts of the playerlist - there's a rare chance that the bot's cache doesn't have any useful information in it when
     the playerlist is generated, but... well, it's rare because the bot caches a lot quickly. Also, a Premium feature (fetching device information) can slow down the bot.
 [^2]:
-    During the tests I did to determine this fact, the bot spent around *0.5 seconds* from the time the command is recieved by the bot to actually gather and process the data into embeds.
+    During the tests I did to determine this fact, the bot spent around *0.5 seconds* from the time the command is received by the bot to actually gather and process the data into embeds.
     The other ~1.5 seconds is literally spent sending the embeds to Discord (they have to be sent in separate messages due to their high character count) and nothing else.
 [^3]: Through `/get-player-log`.
 [^4]: This bot is *hard* to self-host due to the number of things it uses. Check out [this FAQ question][can-i-self-host-this] for more information.
 [^5]: https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions
 [^6]:
     As the name of the feature suggests, it detects when your Realm goes *offline* - more accurately, it detects when the bot can't detect the Realm.
-    This does mean it can trigger if the bot is accidentially kicked or banned, or just because Minecraft decided to freak out for a few minutes.
+    This does mean it can trigger if the bot is accidentally kicked or banned, or just because Minecraft decided to freak out for a few minutes.
 [^7]: This requires bypassing certain parts of the bot (its cache) to get up-to-date information, hence the slowdown.
 [^8]: If users are offline on Xbox Live, their device won't appear. There may be settings that also make the user not share their current game details.
