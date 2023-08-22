@@ -20,7 +20,11 @@ When you initially link your server to a Realm though, it uses a different metho
 
 ### Does this work on Bedrock servers? What about Java Edition Realms and servers?
 
-Nope. This uses Realm-specific services. For servers (both editions), you can get away with plugins/mods; for Java Edition, there *is* a Java Realm service that someone could use if they're interested enough.
+Nope. This uses Bedrock Realms specific services, and will never expand out to other versions/servers.
+
+For Java Edition, if you're running a server, you *should* be running something that isn't a vanilla server (IE Fabric or Paper) and so should have options for full chat tracking, including joins/leaves. For Realms, [there *is* a service for them](https://wiki.vg/Realms_API) - I can't verify if it would work for a player tracking bot, but it's worth a shot.
+
+For Bedrock servers, you may have luck with special addons or plugins - I've found addons like [BedrockBridge](https://bedrockbridge.esploratori.space/) out there (not affiliated), and I'm sure there's many more.
 
 ### What about other Realm-based bots? Why should I use your bot?
 
@@ -28,17 +32,18 @@ First off: *The Playerlist Bot is not a direct competitor to those bots.* You ca
 
 The Playerlist Bot does one thing very well - track and showcase the join/leaves of players. Not many bots do this on the level of the Playerlist Bot due to the sheer complexity of it all, and they likely won't do it at the *speed* the Bot does it at.
 
-Most bots instead either focus on more direct means of moderation (IE providing global banlists), controlling and viewing the Realm from Discord itself, or both. They're all great bots because of those features, but those features don't devalue the Playerlist Bot.
+Most bots instead either focus on more direct means of moderation (IE providing global ban lists), controlling and viewing the Realm from Discord itself, or both. They're all great bots because of those features, but those features don't devalue the Playerlist Bot.
 
 It's also worth noting:
-- This bot *does not* require using your or an alternate account to do its job. It uses a single bot-owned account to do its work instead, and doesn't even take up a player slot being on the Realm itself.
+- This bot *does not* require using your or an alternate account to do its job. It uses a single bot-managed account to do its work instead, and doesn't even take up a player slot being on the Realm itself.
 - The bot is open source under the GNU Affero General Public License v3.0[^3], and *will* always be open source. In general, the bot promotes collaboration with whoever it can find, and is the reason we have partnerships with other bots.
 
 ### Why can't it track a Realm's chat?
 
 A couple of reasons:
-- It's difficult (at least with the programming language I'm using). It's a huge time investment to make it work, and it would change how the bot's fundamentals a decent bit.
-- Even if I *do* get it to work, it requires a dummy account to *always* be on the Realm, thus taking up a player space. This is something I'm against doing ever.[^4]
+- The Bedrock Realm specific services the bot uses does not allow for this. To work around this, the bot would have to *be on the Realm,* listening to the chat as its received.
+  - Of course, this means a slot would be taken up by a bot account. Being realistic, this would mean *you making an alt account* (or me making a bunch of them) to do this, which is a pain. Also, it taking up a slot is something I'm against doing ever.[^4]
+  - It's difficult, at least with the programming language I'm using. It's a huge time investment to make it work, especially with how low level it would be.
 - Frankly, it's out of scope for the bot. It would be nice, but the bot mostly tracks player join/leaves in order to not reinvent the wheel and allow for easier maintainability (the bot is largely written by one person, so maintainability is key).
 - Many other bots, like [the Realm Bot](https://realmbot.dev/) and [Cosmos](https://cosmosbot.dev/), offer this feature (usually through a premium version or with restrictions).
 
@@ -46,7 +51,7 @@ A couple of reasons:
 
 Nope. It would be a nice feature admittedly, and I've gotten plenty of people asking, but...
 
-- It would be a pain to go into the code for the bot to make it work, as the bot very much assumes and abuses the fact that there is only one Realm per Discord server.
+- It would be a pain to go into the code for the bot to make it work, as the bot very much assumes and abuses the fact that there is only one Realm per Discord server (though it *does not* assume the opposite).
 - Even if it was supported, it would create additional strain on the bot, and most likely be a Premium feature.
 
 Your best bet is to just have two servers, one per Realm. This idea is most likely not ever going to happen, but it may in the far future.
@@ -57,15 +62,15 @@ Your best bet is to just have two servers, one per Realm. This idea is most like
 
 Well, this could be due to a number of reasons:
 - For the autorunner version: was anyone on the Realm during that time? If there was no one, then the bot will not autorun the list during that time.
-- Did you accidentally kick the account responsible for keeping track of the Realm? Did you decide to change which Realm a "Realm" is using? Try relinking it via `/config link-realm`!
+- Did you accidentally kick the account responsible for keeping track of the Realm? Did you decide to change which Realm a "Realm" is using? Try relinking it - you can follow [the Server Setup Guide](server_setup.md) for how to do that.
 - Did it spit out an error? I'll already have the error and more information, so don't worry about that.
 - Something else? Honestly, relinking usually fixes the problem anyways. Taking a look at `/config info` and seeing if anything's off is a good idea though.
 
 ### There's a user called "Account with XUID (insert numbers here)" on the list. Who's that?
 
-Well, it's first worth explaining that that happens when the bot fails to convert what can essentially be called Xbox's IDs into its respective gamertag. Let me explain.
+Well, it's first worth explaining that that happens when the bot fails to convert Xbox (or, well, Microsoft) IDs into its respective gamertag. Let me explain.
 
-You may have heard of a Discord ID - it's a bunch of numbers that represents a thing on Discord, like a user, a channel, or a role (we'll be focusing on users). These numbers are useful because trying to use names means we can have conflicts - there's *definitely* more than one user named "Hawk" out there[^5], after all. Instead of referring to a user by name, Discord tools (and Discord itself) refers to users by their ID, with their usernames basically being a thing only people see.
+You may have heard of a Discord ID - it's a bunch of numbers that represents a thing on Discord, like a user, a channel, or a role (we'll be focusing on users). These numbers are useful because computers *much* prefer numbers over text - this allows accounts to have better performance and also allows flexibility with naming systems[^5]. Instead of referring to a user by name, Discord tools (and Discord itself) refers to users by their ID, with their usernames basically being a thing only people see.
 
 A similar concept is present in Xbox Live, which is used a lot with Realms (and Bedrock Edition in general). "Gamertags" can be thought up as usernames here, and "XUID"s are like Discord IDs.
 
@@ -98,7 +103,7 @@ Note that Python is *not* like Javascript, the most popular language for making 
 ### Why is this bot so complex?
 
 A lot of reasons:
-- The Xbox/Realm API (they're essentially the same thing, being made by Microsoft) is a pain to work with. There's a reason why people have made tools like [OpenXBL](https://xbl.io/) or [XAPI](https://xapi.us/) - there's a lot of pain points when it comes to *just authenticating into the APIs themselves*, and it's a lot easier to just let someone else do that work[^9]. Unforunately, it comes at a speed cost, and also has limits that would be too restrictive for Playerlist[^10]. Instead, we do everything ourselves, adding a lot of complexity.
+- The Xbox/Realm API (they're essentially the same thing, being made by Microsoft) is a pain to work with. There's a reason why people have made tools like [OpenXBL](https://xbl.io/) or [XAPI](https://xapi.us/) - there's a lot of pain points when it comes to *just authenticating into the APIs themselves*, and it's a lot easier to just let someone else do that work[^9]. Unfortunately, it comes at a speed cost, and also has limits that would be too restrictive for Playerlist[^10]. Instead, we do everything ourselves, adding a lot of complexity.
   - Now, [there is an Xbox API library made in Python](https://github.com/OpenXbox/xbox-webapi-python), as discussed in an earlier question, and it does help shed some light on how the whole process works. However, that library is very obtuse (having several questionable design choices)[^11] and is slower than it could be for many reasons[^12], so I've had to make mini-libraries in the bot itself that do it better. Of course, it doesn't handle the Realms API either, though that's not its fault.
   - Even *when* you log in, the Xbox/Realm API is just a mess. A lot of inconsistency with capitalization that makes it a pain to parse, lots of undocumented fields and behaviors (90% of the bot's code uses undocumented endpoints), and general inconsistency with the results you get. I very much sense Microsoft made the API when they were new to making APIs, and is unable to improve it due to how many things that would break.[^13] That and they really do not like simple authentication.
   - Oh yeah, the APIs just *fail* sometimes. Like, it's a completely normal thing and you can't do anything about it.[^14]
@@ -110,7 +115,7 @@ A lot of reasons:
     Yes, the bot polls the service *every minute*. Mojang seems fine with it for my bot specifically, but be careful about doing this for your own projects - the
     account behind the bot has been banned before for this very reason.
 [^2]:
-    To be more specific: every Realm has a thing called a "club", which is used to store photos and messgaes in the activity log of the Realm. The bot can usually
+    To be more specific: every Realm has a thing called a "club", which is used to store photos and messages in the activity log of the Realm. The bot can usually
     exploit this to gain past data, though clubs are a weird thing.
 [^3]:
     This very website is *also* open source, under Apache License 2.0, [as you can see on the GitHub page](https://github.com/AstreaTSS/RealmsPlayerlistWebsite). Only the Premium
@@ -118,7 +123,7 @@ A lot of reasons:
 [^4]:
     Not because it's a horrible idea or anything. In fact, the Realm Bot does it for its premium service. I just rather provide services that don't need a player
     on for convenience's (for you and me) sake and to distinguish the Playerlist Bot from other bots.
-[^5]: Though the system post-discriminators does mean there's only one @Hawk - still, an ID is easier for programs to use for various reasons (computers love numbers).
+[^5]: Of course, Discord itself, post discriminators, only uses one username per account, but it does allow other services to not do that if they want.
 [^6]: "Ins-and-outs" may be the wrong word here. The bot just requires decent knowledge of Python in general.
 [^7]:
     Redis gives you a free 20 MB cluster through their cloud service, Supabase and CockroachDB provide good free tiers for Postgres, Sentry.io is free for one project,
@@ -132,9 +137,9 @@ A lot of reasons:
     Namely with its lack of support for `orjson` or any alternative to the very slow `json`, its usage of `httpx` over `aiohttp` (granted, `httpx` has a better UX),
     and its overall bloated design.
 [^13]: Perhaps this is too nice of an assumption - even their more recent additions have the same issue.
-[^14]: By all means, any API is bound to have 5XX errors every once in a while. It's a *daily* occurance for the Xbox/Realms API.
+[^14]: By all means, any API is bound to have 5XX errors every once in a while. It's a *daily* occurrence for the Xbox/Realms API.
 [^15]: Speed is also why the bot *has* a Premium tier - there's no way I could offer those benefits at scale with the speeds the bot has right now.
 [^16]:
-    More specically, the bot gets and stores players in the form of XUIDs - as mentioned earlier, those are Xbox's version of Discord IDs. Fetching has to be done
+    More specifically, the bot gets and stores players in the form of XUIDs - as mentioned earlier, those are Xbox's version of Discord IDs. Fetching has to be done
     to get the gamertag of those XUIDs, and Microsoft *really* didn't design either of the APIs with the sheer amount we need to fetch in mind. As of the right now,
     the bot uses a combination of excessive caching and an undocumented endpoint that is more supportive of the bot's workload to do the work.
