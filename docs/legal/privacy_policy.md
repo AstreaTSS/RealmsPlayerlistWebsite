@@ -4,7 +4,7 @@ description: The privacy policy for the Realms Playerlist Bot.
 
 # Privacy Policy
 
-*Last updated: 2023-08-14 (YYYY-MM-DD).*
+*Last updated: 2023-08-23 (YYYY-MM-DD).*
 
 This document contains the privacy policy and agreement you accept when adding the below mentioned Bot to a server, or use them as a member of a Server. This document does not supersede any of the terms laid out by Discord.
 
@@ -50,7 +50,7 @@ This data may be collected automatically by some Services. This data is used to 
 
 ## Why We Collect Data
 
-We collect data to facilitate functions of Services, and to provide us with analytical data about the Bot's usage and behavioral patterns. For example, data from the Xbox Services is used in order to track several's Players' activity on a Realm to later present them in a human-readable way.
+We collect data to facilitate functions of Services, and to provide us with analytical data about the Bot's usage and behavioral patterns. For example, data from the Xbox Services is used in order to track several Players' activity on a Realm to later present them in a human-readable way.
 
 ## Who We Share Data With
 
@@ -70,7 +70,7 @@ The Bot stores information relating to a Server's configuration. This informatio
 
 #### Gamertags
 
-The Bot uses Redis/a cache in order to store a link between "XUID", the way Xbox Services denotes its Users, and a "Gamertag", a human-friendly way of referring to said User. Entries are automatically deleted after 14 days.
+The Bot uses Redis/a cache in order to store a link between "XUID", the way Xbox Services denotes its Users, and a "Gamertag", a human-friendly way of referring to said User. Entries are automatically deleted after 7 days.
 
 #### Realm Player Session Activity
 
