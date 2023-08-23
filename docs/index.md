@@ -71,6 +71,17 @@ Realms go offline a lot if they're big, most likely because they can't handle th
 
 This simply hooks onto your autorunning playerlist. The Realm offline detection is mostly accurate[^6] - it may not work as well for smaller Realms, but for larger ones, it should work fine.
 
+### Playtime Leaderboard
+
+By using `/leaderboard` and either voting or purchasing Premium, you can get a ranked list of players by playtime for your Realm:
+
+<center>
+  ![Picture of how /leaderboard looks like.](_static/leaderboard.png){ width="350" loading="lazy"}
+  <figcaption>Note: the playtimes are rounded for convenience, and so may be slightly off.</figcaption>
+</center>
+
+The period of time can be adjusted as needed - it can go all the way back to 30 days.
+
 ### Graphs
 
 You can make cool graphs about your Realm and its users:
@@ -80,6 +91,8 @@ You can make cool graphs about your Realm and its users:
 </figure>
 
 There are a variety of options to chose from, from the graph up above to a day-to-day breakdown. The data isn't 100% accurate, but you can use it to observe patterns... or just show it off for fun.
+
+Some of the graphs with longer time periods may require voting or purchasing Premium to use.
 
 ### Premium
 
@@ -128,6 +141,10 @@ You can export your Realm's session data (a session being a period of time where
 <figure markdown>
   ![Picture on how that data is sent.](_static/export_data.png){ width="750" loading="lazy"}
 </figure>
+
+#### Voting Bypass
+
+Any features that require voting (large graphs, `/leaderboard`, etc.) can be bypassed if you have Premium. This is useful if you want to use those features without having to vote every 12 hours.
 
 ## Adding The Bot
 

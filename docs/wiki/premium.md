@@ -57,6 +57,10 @@ You can export your Realm's session data (a session being a period of time where
   ![Picture on how that data is sent.](export_data.png){ width="750" loading="lazy"}
 </figure>
 
+### Voting Bypass
+
+Any features that require voting (large graphs, `/online` with device information, `/leaderboard`) can be bypassed if you have Premium. This is useful if you want to use those features without having to vote every 12 hours.
+
 ## How to Get Playerlist Premium
 
 Now, you might be wondering how to get it, huh?
