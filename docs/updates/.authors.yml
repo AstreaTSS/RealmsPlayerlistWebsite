@@ -1,4 +1,5 @@
-astrea:
-  name: AstreaTSS
-  description: Creator of Realms Playerlist Bot
-  avatar: https://github.com/AstreaTSS.png
+authors:
+  astrea:
+    name: AstreaTSS
+    description: Creator of Realms Playerlist Bot
+    avatar: https://github.com/AstreaTSS.png
