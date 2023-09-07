@@ -1,4 +1,5 @@
 nav:
-  - server_setup.md
+  - features.md
   - premium.md
+  - server_setup.md
   - faq.md

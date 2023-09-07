@@ -49,22 +49,6 @@ extra_css:
 repo_url: https://github.com/AstreaTSS/RealmsPlayerlistBot
 repo_name: AstreaTSS/RealmsPlayerlistBot
 
-nav:
-  - Wiki:
-    - wiki/server_setup.md
-    - wiki/premium.md
-    - wiki/faq.md
-  - Legal:
-    - legal/tos.md
-    - legal/privacy_policy.md
-    - legal/acknowledgements.md
-  - Updates:
-    - Posts: updates/index.md
-  - External Links:
-    - Support Server: https://discord.gg/NSdetwGjpK
-    - Top.gg Page: https://top.gg/bot/725483868777611275
-    - Source Code: https://github.com/AstreaTSS/RealmsPlayerlistBot
-
 copyright: "&copy Copyright 2020-present AstreaTSS."
 extra:
   social:

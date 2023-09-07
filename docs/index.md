@@ -1,7 +1,5 @@
 ---
 title: Realms Playerlist Bot
-hide:
-  - footer
 ---
 
 <figure markdown>
@@ -21,130 +19,27 @@ hide:
 </p>
 
 <p align="center">
-  A bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves.
+  A bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves. A great companion to other Realm bots.
 </p>
 
 It's:
-- 🚀 **Fast:** Under the right (and typical) circumstances[^1], it can send a list of ~300 players in under *2 seconds,* most of which (~1.5 seconds) is spent just sending messages to Discord.[^2]
-- 📊 **Informative:** The main feature of the bot, the playerlist, can give a detailed log of players on a Realm at a moment's notice. You can also get a breakdown for an individual player to analyze as you wish.[^3]
-- 👌 **Easy to Use**: Simply add the bot, link your Realm, and you already have join/leave tracking enabled - no need to use your Xbox account for the bot's features. Take a look at the [Server Setup Guide](server_setup.md) for more information.
-- 🔓 **Open Source**: The code is available to the public and able to be audited and learned from. Dedicated users can even (try to[^4]) self-host the bot, if they wish.
+- ⚙️ **Feature-Filled**: The main feature of the bot, the playerlist, can give a detailed log of players that have been on a Realm both as a command and automatically every hour. There are plenty of more commands able to do more, like commands to:
+  - Make graphs of a Realm/player.
+  - Give specific details of a player and times they joined/left.
+  - Send a leaderboard to find out who's been on your Realm the most.
+  - And more! Check out [the features page](features.md) for more information.
+- 🚀 **Fast**: Under typical circumstances, it can send a list of ~300 players that have been on a Realm in under *2 seconds*[^1]. Other commands are similarly fast, even with large amounts of players.[^2]
+- 👌 **Easy to Use**: Simply add the bot, link your Realm using a Realm code or a one-time authentication process, and you already have join/leave tracking enabled - no need to use your Xbox account for the bot's actual features. Take a look at the [Server Setup Guide](server_setup.md) for more information.
+- 🔓 **Open Source**: The code is available to the public under the GNU AGPL license and able to be audited and learned from. Dedicated users can even (try to[^3]) self-host the bot, if they wish.
 
-## Features
+With ***Playerlist Premium***, only $2 a month, you can get these features and more:
+- **Live Playerlist**, which showcases who left and joined every minute.
+- **Live Online List**, which sends a message that constantly updates to show currently online players.
+- **Device information fetching**, which allows you to see which devices players are using for many commands.
+- **Full Realm data exporting**, which allows for complete control over your Realm's data.
 
-### The Playerlist
-Of course, this is the main feature of the bot. It's also one of those features that is easier to show than tell:
+You can check out every feature of Premium and how to get it [on the Premium Page](premium.md).
 
-<figure markdown>
-  ![Picture of how the playerlist looks like.](_static/playerlist.png){ width="550" loading="lazy" }
-  <figcaption>The censored space are gamertags of users on the Realm.</figcaption>
-</figure>
-
-The command version allows you to get who was on the Realm up to the last 24 hours (though it defaults to 12 hours). There is also an automatic version that runs every hour in a specified channel (as seen in the picture) - it displays a list going back an hour, every hour.
-
-The command can normally only be run by people with Manage Server permissions (can be adjusted the same way you adjust other slash command permissions[^5]) and is not meant to be seen by normal people. However, normal users, by default, can run `/online`, which shows everyone who is on the Realm at that moment:
-
-<figure markdown>
-  ![Picture of how /online looks like.](_static/online.png){ width="450" loading="lazy"}
-</figure>
-
-### Specific Player Information
-
-You can also request for a breakdown of join/leaves (otherwise known as sessions) via `/get-player-log`:
-
-<figure markdown>
-  ![Picture of how /get-player-log looks like.](_static/get_player_log.png){ width="550" loading="lazy"}
-</figure>
-
-Using this command allows you to scroll through each session in an intuitive format. For fun, the command also displays their total playtime.
-
-By default, the command only goes back a day, but it can go till 7, as seen here.
-
-### Realm Offline Notifications
-
-Realms go offline a lot if they're big, most likely because they can't handle the load. Sometimes, it can be useful to get pinged when that happens:
-
-<figure markdown>
-  ![Picture of how Realm offline notifications looks like.](_static/realm_offline.png){ loading="lazy" }
-  <figcaption>Note: despite the role name used, this does not exclusively trigger when the Realm crashes.</figcaption>
-</figure>
-
-This simply hooks onto your autorunning playerlist. The Realm offline detection is mostly accurate[^6] - it may not work as well for smaller Realms, but for larger ones, it should work fine.
-
-### Playtime Leaderboard
-
-By using `/leaderboard` and either voting or purchasing Premium, you can get a ranked list of players by playtime for your Realm:
-
-<center>
-  ![Picture of how /leaderboard looks like.](_static/leaderboard.png){ width="350" loading="lazy"}
-  <figcaption>Note: the playtimes are rounded for convenience, and so may be slightly off.</figcaption>
-</center>
-
-The period of time can be adjusted as needed - it can go all the way back to 30 days.
-
-### Graphs
-
-You can make cool graphs about your Realm and its users:
-
-<figure markdown>
-  ![Picture on how graphs can looks like.](_static/realm_chart.png){ width="550" loading="lazy"}
-</figure>
-
-There are a variety of options to chose from, from the graph up above to a day-to-day breakdown. The data isn't 100% accurate, but you can use it to observe patterns... or just show it off for fun.
-
-Some of the graphs with longer time periods may require voting or purchasing Premium to use.
-
-### Premium
-
-**Realms Playerlist Premium** allows for extra features that otherwise could not be provided by the bot without funding. [Take a closer look at Premium here.](premium.md)
-
-#### Live Playerlist
-
-Instead of making the bot send a summary of people on every hour, a **live playerlist** shows who joined and left a Realm every minute, basically making it a live join/leave logger.
-
-It looks something like this:
-
-<figure markdown>
-  ![Picture on how live playerlist looks like.](_static/live_playerlist.png){ width="420" loading="lazy"}
-</figure>
-
-This has a variety of uses, from statistical to moderation - it's really up to you what you do with this information. Some Realms use it both to narrow down subjects to a precise degree while also tracking active Realm times. Using Discord's search functionality, the possibilities are near endless.
-
-#### Live Online List
-
-Taking the live playerlist to its logical conclusion, a **live online list** is a message that constantly updates with the players currently on the Realm, as seen below:
-
-<figure markdown>
-  ![Animated picture on how the live online list looks like.](_static/live_online_list.webp){ width="500" loading="lazy"}
-</figure>
-
-As of right now, this feature requires the live playerlist to also be enabled.
-
-#### Device Information
-
-Through an extra toggle, the bot can fetch and display device information whenever a user is online. This affects `/online`, the normal playerlist, and the live playerlist.
-
-For example, `/online` becomes this:
-
-<figure markdown>
-  ![Picture on how `/online` looks when the toggle is enabled.](_static/fetch_devices.png){ width="420" loading="lazy"}
-</figure>
-
-This does slow the bot down a bit when fetching the device[^7], and privacy settings may make some users not have information regardless[^8], but can used as an extra moderation/statistical tool.
-
-This is also available as a toggle to non-Premium users of `/online` (and only `/online`) if they vote for the bot.
-
-#### Realm Session Export
-
-You can export your Realm's session data (a session being a period of time where the player was on a Realm, including when they joined and were last seen) for around the last 30 days to a CSV file, which can be opened in a spreadsheet program like Excel or Google Sheets. This can be used to make your own graphs (though some fiddling around will be needed), or just to have the data for yourself.
-
-<figure markdown>
-  ![Picture on how that data is sent.](_static/export_data.png){ width="750" loading="lazy"}
-</figure>
-
-#### Voting Bypass
-
-Any features that require voting (large graphs, `/leaderboard`, etc.) can be bypassed if you have Premium. This is useful if you want to use those features without having to vote every 12 hours.
 
 ## Adding The Bot
 
@@ -155,16 +50,6 @@ If you wish to add this bot, just [use the Server Setup Guide on how to do so](s
 There's a whole section in the wiki about this! [Check it out here](faq.md).
 
 [^1]:
-    The bot relies on a cache to speed up certain parts of the playerlist - there's a rare chance that the bot's cache doesn't have any useful information in it when
-    the playerlist is generated, but... well, it's rare because the bot caches a lot quickly. Also, a Premium feature (fetching device information) can slow down the bot.
-[^2]:
-    During the tests I did to determine this fact, the bot spent around *0.5 seconds* from the time the command is received by the bot to actually gather and process the data into embeds.
-    The other ~1.5 seconds is literally spent sending the embeds to Discord (they have to be sent in separate messages due to their high character count) and nothing else.
-[^3]: Through `/get-player-log`.
-[^4]: This bot is *hard* to self-host due to the number of things it uses. Check out [this FAQ question][can-i-self-host-this] for more information.
-[^5]: https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions
-[^6]:
-    As the name of the feature suggests, it detects when your Realm goes *offline* - more accurately, it detects when the bot can't detect the Realm.
-    This does mean it can trigger if the bot is accidentally kicked or banned, or just because Minecraft decided to freak out for a few minutes.
-[^7]: This requires bypassing certain parts of the bot (its cache) to get up-to-date information, hence the slowdown.
-[^8]: If users are offline on Xbox Live, their device won't appear. There may be settings that also make the user not share their current game details.
+    During the tests I did to determine this fact (around August 2023), the bot spent around 0.5 seconds from the time the command is received by the bot to actually gather and process the data into embeds. The other ~1.5 seconds is literally spent sending the embeds to Discord (they have to be sent in separate messages due to their high character count) and nothing else.
+[^2]: In general, commands shouldn't take more than 10 seconds. At worst, they won't take more than a minute.
+[^3]: This bot is *hard* to self-host due to the number of things it uses. Check out [this FAQ question][can-i-self-host-this] for more information.
