@@ -29,8 +29,11 @@ There are two methods of linking the bot to your Realm from here, and they depen
     Use `/config alternate-link` to link your Realm to the server via the alternate method. This will start a setup process that will guide you through the process of linking the Realm. Make sure to read the prompts carefully!
 
 From here, the steps are the same for both methods:
-- If you want the auto-ran playerlist, make sure the bot is able to read and send messages to the channel, then use `/config playerlist-channel`. Once again, make sure to fill in the option for the channel (don't set `unset`!).
-- If you want to be pinged whenever the Realm goes down and/or crashes, use `/config realm-offline-role` (of course, don't set `unset`). That one will show you a prompt before actually setting it - pay attention to that!
+- If you want the autorunning playerlist, make sure the bot is able to read and send messages to the channel, then use `/config playerlist-channel`. Once again, make sure to fill in the option for the channel (don't set `unset`!).
+- Other configuration settings follow a similar pattern, and are usually in `/config` (with the exception of `/watchlist`).
+- After that, free to check all of the commands the bot has either through scrolling through the command list or using `/help`!
+  - [The features](features.md) talks more in-depth about specific features.
+  - [The Premium page](premium.md) talks more abou what Premium is, the features it has, and how to get it, if you're interested.
 
 And that's it! If you got no errors, then you're all set. If you do, please follow the instructions they provide.
 
