@@ -40,6 +40,12 @@ With ***Playerlist Premium***, only $2 a month, you can get these features and m
 
 You can check out every feature of Premium and how to get it [on the Premium Page](premium.md).
 
+## Features
+
+As noted above, you can find more information about the (free) features the Playerlist Bot has [on the features page](features.md).
+
+Information about Playerlist Premium and the features it brings can be found at [the Premium page](premium.md).
+
 
 ## Adding The Bot
 
