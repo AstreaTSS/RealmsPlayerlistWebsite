@@ -33,7 +33,7 @@ From here, the steps are the same for both methods:
 - Other configuration settings follow a similar pattern, and are usually in `/config` (with the exception of `/watchlist`).
 - After that, free to check all of the commands the bot has either through scrolling through the command list or using `/help`!
   - [The features](features.md) talks more in-depth about specific features.
-  - [The Premium page](premium.md) talks more abou what Premium is, the features it has, and how to get it, if you're interested.
+  - [The Premium page](premium.md) talks more about what Premium is, the features it has, and how to get it, if you're interested.
 
 And that's it! If you got no errors, then you're all set. If you do, please follow the instructions they provide.
 
