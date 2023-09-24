@@ -56,6 +56,6 @@ If you wish to add this bot, just [use the Server Setup Guide on how to do so](s
 There's a whole section in the wiki about this! [Check it out here](faq.md).
 
 [^1]:
-    During the tests I did to determine this fact (around August 2023), the bot spent around 0.5 seconds from the time the command is received by the bot to actually gather and process the data into embeds. The other ~1.5 seconds is literally spent sending the embeds to Discord (they have to be sent in separate messages due to their high character count) and nothing else.
+    During the tests I did to determine this fact (around August 2023), the bot spent around 0.5 seconds from the time the command is received by the bot to actually gather and process the data into embeds. The other ~1.5 seconds is literally spent sending the embeds through Discord (web requests take a bit, and the bot also only sends one embed per message due to character limits).
 [^2]: In general, commands shouldn't take more than 10 seconds. At worst, they won't take more than a minute.
 [^3]: This bot is *hard* to self-host due to the number of things it uses. Check out [this FAQ question][can-i-self-host-this] for more information.
