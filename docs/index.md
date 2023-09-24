@@ -57,5 +57,5 @@ There's a whole section in the wiki about this! [Check it out here](faq.md).
 
 [^1]:
     During the tests I did to determine this fact (around August 2023), the bot spent around 0.5 seconds from the time the command is received by the bot to actually gather and process the data into embeds. The other ~1.5 seconds is literally spent solely on sending the embeds through Discord (web requests take a bit, and the bot also only sends one embed per message due to character limits).
-[^2]: In general, commands shouldn't take more than 10 seconds. At worst, they won't take more than a minute.
+[^2]: In general: complex commands, like the playerlist, shouldn't take more than 10 seconds (and even that estimate is high). At worst, they won't take more than a minute.
 [^3]: This bot is *hard* to self-host due to the number of things it uses. Check out [this FAQ question][can-i-self-host-this] for more information.
