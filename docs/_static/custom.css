@@ -6,8 +6,13 @@
   --md-primary-bg-color--light: hsla(0, 0%, 100%, .7);
 }
 
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #a456ed;
+}
+
 @media (prefers-color-scheme: dark) {
   [data-md-color-scheme="automatic"] {
+    --md-primary-fg-color: #a456ed;
 
     --md-default-fg-color: hsla(var(--md-hue), 15%, 90%, 0.82);
     --md-default-fg-color--light: hsla(var(--md-hue), 15%, 90%, 0.56);
