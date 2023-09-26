@@ -125,6 +125,7 @@ markdown_extensions:
       truly_sane: true
   - pymdownx.magiclink
   - pymdownx.smartsymbols
+  - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tilde
   - pymdownx.snippets
