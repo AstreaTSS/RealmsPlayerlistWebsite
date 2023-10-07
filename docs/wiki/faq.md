@@ -45,7 +45,7 @@ A couple of reasons:
   - Of course, this means a slot would be taken up by a bot account. Being realistic, this would mean *you making an alt account* (or me making a bunch of them) to do this, which is a pain. Also, it taking up a slot is something I'm against doing ever.[^4]
   - It's difficult, at least with the programming language I'm using. It's a huge time investment to make it work, especially with how low level it would be.
 - Frankly, it's out of scope for the bot. It would be nice, but the bot mostly tracks player join/leaves in order to not reinvent the wheel and allow for easier maintainability (the bot is largely written by one person, so maintainability is key).
-- Many other bots, like [the Realm Bot](https://realmbot.dev/) and [Cosmos](https://cosmosbot.dev/), offer this feature (usually through a premium version or with restrictions).
+- Many other bots, like [the Realm Bot](https://realmbot.dev/), [Cosmos](https://cosmosbot.dev/), and [UniqueShield](https://discord.gg/WAmKwkewgH) offer this feature (usually through a premium version or with restrictions).
 
 ### Can I link multiple Realms to one Discord server? Can I have two playerlist channels, each one being linked to a different Realm?
 
