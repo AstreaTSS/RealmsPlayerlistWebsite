@@ -1,5 +1,7 @@
 ---
 title: Realms Playerlist Bot
+hide:
+  - footer
 ---
 
 <figure markdown>

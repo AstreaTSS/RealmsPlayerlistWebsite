@@ -5,7 +5,7 @@ description: Information about Realms Playerlist Premium and how to get it.
 
 # Playerlist Premium
 
-**Realms Playerlist Premium** is a $2 USD (minimum) monthly purchase you can make in order to get special features not usually obtainable. These are usually locked behind a paywall because it would be infeasible to allow everyone to use these features without making the bot as a whole suffer - by limiting the amount of users who can use them, I can still provide these features to those who need it while also earning funds necessary to keep the bot alive and running as it grows (scaling isn't cheap).
+**Realms Playerlist Premium** is a $2 USD monthly purchase (or a $20 USD yearly purchase) you can make in order to get special features not usually obtainable. These are usually locked behind a paywall because it would be infeasible to allow everyone to use these features without making the bot as a whole suffer - by limiting the amount of users who can use them, I can still provide these features to those who need it while also earning funds necessary to keep the bot alive and running as it grows (scaling isn't cheap).
 
 ## Features
 
