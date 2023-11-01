@@ -37,7 +37,7 @@ As of right now, this feature requires the live playerlist to also be enabled.
 
 ### Device Information
 
-Through an extra toggle (`/premium fetch-devices`), the bot can fetch and display device information whenever a user is online. This affects `/online`, the normal playerlist, and the live playerlist.
+Through an extra toggle (`/premium device-information`), the bot can fetch and display device information whenever a user is online. This affects `/online`, the normal playerlist, and the live playerlist.
 
 For example, `/online` becomes this:
 

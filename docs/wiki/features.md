@@ -15,7 +15,7 @@ Of course, this is the main feature of the bot. It's also one of those features 
   <figcaption>The censored space are gamertags of users on the Realm.</figcaption>
 </figure>
 
-The command version (`/playerlist`) allows you to get who was on the Realm up to the last 24 hours (though it defaults to 12 hours). There is also an automatic version that runs every hour in a specified channel (as seen in the picture) - it displays a list going back an hour, every hour. This can be adjusted through `/config playerlist-channel`.
+The command version (`/playerlist`) allows you to get who was on the Realm up to the last 24 hours (though it defaults to 12 hours). There is also an automatic version that runs every hour in a specified channel (as seen in the picture) - it displays a list going back an hour, every hour. This can be configured through `/config playerlist-channel`.
 
 The command can normally only be run by people with Manage Server permissions (can be adjusted the same way you adjust other slash command permissions[^1]) and is not meant to be seen by normal people. However, normal users, by default, can run `/online`, which shows everyone who is on the Realm at that moment:
 
