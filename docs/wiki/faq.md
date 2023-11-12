@@ -90,6 +90,16 @@ There's a variety of people it could be - "Unknown Player" is used when the bot 
 
 Of course, there could be other reasons why that appeared (IE bugs), but those are rarer.
 
+### The bot unlinked itself and stopped tracking my Realm and/or sending out the autorunning playerlist! Is this a bug?
+
+This is very likely not a bug - usually, this happens because of an intended mechanic of the bot.
+
+The bot will automatically unlink itself after *7 days of not seeing any join/leave activity on your Realm.* This happens often because either a Realm closes, the account behind the bot was banned, or a Realm was simply that inactive. The bot tries to send warnings about this lack of inactivity far beforehand, but if you have no autorunning playerlist, this warning will not appear. There is also a setting that turns off these warnings (`/config realm-warning`), but the unlinking itself will still happen after 7 days - it's usually a better idea to keep the warnings on so you have a better idea of the time you have left.
+
+This is done so that the bot's processing power and storage are not spent trying to gather inactive Realms, and so will not be removed. If your Realm was active, check that the account wasn't banned or kicked. If your Realm isn't active, unforunately, there isn't a way to exempt yourself from the check. In any case, you should be able to go through the [setup process again](server_setup.md) to re-enable the bot.
+
+There is also a similar behavior specific to the autorunning playerlist and any notification channels - if the bot has tried 3 times to send a message to the channel and has failed due to a non-outage fault (IE permissions became invalid or the channel was deleted), then it will unlink the playerlist. Please check that the channel you want to use actually exists and that the bot has permissions to Read and Send Messages and Embed Links. Once again, if this unlinking happens to you, you can simply re-link the channel.
+
 ### There's another problem not answered here. Where can I ask about it?
 
 In the [support server](https://discord.gg/NSdetwGjpK), of course! You can also ask for features there.
