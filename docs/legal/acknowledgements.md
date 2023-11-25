@@ -26,7 +26,7 @@ I won't list every dependency here, because GitHub does a good job of that. Chec
   - Actually, [msgspec](https://github.com/jcrist/msgspec) by [jcrist (Jim Crist-Harif)](https://github.com/jcrist) *does* rival it and is also a great library.[^3]
 
 ## Other
-- Literally anyone who made [this page about the Realms API](https://wiki.vg/Bedrock_Realms) is my savior. What's otherwise undocumented was made really easy to understand and use thanks to that page
+- Literally anyone who made [this page about the Realms API](https://wiki.vg/Bedrock_Realms) is my savior. What's otherwise undocumented was made really easy to understand and use thanks to that page.
 - A lot of people from the [Realm Bot](https://realmbot.dev) have helped me out with some good advise - thanks!
 
 [^1]: Bedrock Edition doesn't have great shader support, and I do not have a GPU capable of raytracing.
