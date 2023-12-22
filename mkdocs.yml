@@ -87,6 +87,7 @@ extra:
 
 plugins:
   - search
+  - offline
   - privacy
   - custom-cards:
       cards_layout_options:
