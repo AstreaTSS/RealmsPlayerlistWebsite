@@ -32,6 +32,7 @@ With ***Playerlist Premium***, only $2 a month, you can get these features and m
 - **Live Playerlist**, which showcases who left and joined every minute.
 - **Live Online List**, which sends a message that constantly updates to show currently online players.
 - **Device information fetching**, which allows you to see which devices players are using for many commands.
+- **Reoccurring Leaderbooard**, which sends a leaderboard of the top players every week, every other week, or every month.
 - **Full Realm data exporting**, which allows for complete control over your Realm's data.
 
 You can check out every feature of Premium and how to get it [on the Premium Page](premium.md).

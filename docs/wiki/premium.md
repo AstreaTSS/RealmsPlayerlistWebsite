@@ -49,6 +49,16 @@ This does slow the bot down a bit when fetching the device[^1], and privacy sett
 
 This is also available as a toggle to non-Premium users of `/online` (and only `/online`) if they vote for the bot.
 
+### Reoccurring Leaderboard
+
+Instead of having to manually run `/leaderboard` every time you want to see the leaderboard, you can have it automatically run every every week, every other week, or every month in a specified channel. This can be configured through `/premium reoccurring-leaderboard`.
+
+<figure markdown>
+  ![Picture on how the reoccurring leaderboard looks when sent.](reoccurring_lb.png){ width="375" loading="lazy"}
+</figure>
+
+After configuration, the bot will send out a leaderboard with a specified period (last X days) at the frequency set, showing roughly the top 20 players (or less, if there were fewer people on that week). This can be used to give rewards for active players, or just to see who's been on the most.
+
 ### Realm Session Export
 
 You can export your Realm's session data (a session being a period of time where the player was on a Realm, including when they joined and were last seen) for around the last 30 days to a CSV file (through `/premium export`), which can be opened in a spreadsheet program like Excel or Google Sheets. This can be used to make your own graphs (though some fiddling around will be needed), or just to have the data for yourself.
