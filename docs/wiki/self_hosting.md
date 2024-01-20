@@ -1,3 +1,7 @@
+---
+description: Information about how to self-host the Realms Playerlist Bot.
+---
+
 # Self Hosting
 
 !!! danger "Note about Self-Hosting"
