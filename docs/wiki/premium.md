@@ -93,7 +93,7 @@ Anyways, on with purchasing:
 
 3. You should be redirected to the Stripe checkout page for Playerlist Premium. Fill out all details and submit it. If it asks you for an address, just note that it's only used to calculate tax.
 
-4. If the payment is successful, then you'll get sent to a page with your code! **Save it immediately, as it will be forever lost if you don't.**
+4. If the payment is successful, then you'll get sent to a page with your code! The code will also be sent to your email. **Keep this code somewhere safe!**
 
   - I cannot recover it if you've forgotten it. The code is encrypted as it's stored, and I cannot reverse the encryption.
   - I'd suggest to take a look at the other notes the page has too.
