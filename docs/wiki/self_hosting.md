@@ -2,7 +2,7 @@
 description: Information about how to self-host the Realms Playerlist Bot.
 ---
 
-# Self Hosting
+# Self-Hosting
 
 !!! danger "Note about Self-Hosting"
     Self-hosting is not recommended for most users, being a complicated process that requires a decent bit of technical knowledge. Only do this if you have a personal interest in self-hosting, or if you want to contribute to the bot's development.
