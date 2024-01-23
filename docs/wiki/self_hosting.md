@@ -47,18 +47,18 @@ There are two methods of self-hosting the bot: using Docker, or using a manual i
   - Remember to rename the generated file to `tokens.json` and set `XBOX_CLIENT_ID` and `XBOX_CLIENT_SECRET` in `config.toml`.
 10. Run `docker compose run --env DB_URL="postgresql://postgres:YOUR_DB_PASSWORD@db:5432/postgres" bot python -m prisma migrate dev` to initialize the database.
   - Replace `YOUR_DB_PASSWORD` with the password you set in the `.env` file.
-  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive).
+  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive). For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
 11. Run `docker compose up -d` to start the bot. You can use `docker compose logs -f` to view the logs of the bot.
-  - To sync slash commands, run `@BOT_MENTION jsk sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
+  - To sync slash commands, run `@BOT_MENTION debug sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
 
 ### Updating
 1. Pull the latest changes from the repo - `git pull`.
 2. Run `docker compose build` to build the bot's Docker image.
 3. If any new entries were added to `migrations/`, run `docker compose run --env DB_URL="postgresql://postgres:YOUR_DB_PASSWORD@db:5432/postgres" bot python -m prisma migrate dev` to update the database.
   - Replace `YOUR_DB_PASSWORD` with the password you set in the `.env` file.
-  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive).
+  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive). For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
 4. Run `docker compose up -d` to restart the bot.
-  - To sync new slash commands, run `@BOT_MENTION jsk sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
+  - To sync new slash commands, run `@BOT_MENTION debug sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
 
 ## Manual Installation
 
@@ -84,18 +84,18 @@ There are two methods of self-hosting the bot: using Docker, or using a manual i
      - All emojis must be in a server that the bot is in.
 7. Run `python -m prisma generate` to generate the database models.
 8. Run `python -m prisma migrate dev` to initialize the database. You'll need to set the `DB_URL` variable manually in your terminal for this command.
-  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive).
+  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive). For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
 9. Run `python main.py` to start the bot. You may want to use a process manager like `pm2` to keep the bot running in the background.
-  - To sync slash commands, run `@BOT_MENTION jsk sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
+  - To sync slash commands, run `@BOT_MENTION debug sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
 
 ### Updating
 1. Pull the latest changes from the repo - `git pull`.
 2. Install the latest packages through `pip install -r requirements.txt`.
 3. If the `prisma` package was updated, or `schema.prisma` was modified with new/removed fields, you should run `python -m prisma generate` to generate the database models.
 4. If any new entries were added to `migrations/`, run `python -m prisma migrate dev` to update the database. You'll need to set the `DB_URL` variable manually in your terminal for this command.
-  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive).
+  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive). For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
 5. Run `python main.py` to restart the bot. You may want to use a process manager like `pm2` to keep the bot running in the background.
-  - To sync new slash commands, run `@BOT_MENTION jsk sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
+  - To sync new slash commands, run `@BOT_MENTION debug sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
 
 ## Notes
 - When first running the bot, you'll need to sync the slash commands to start using the bot. You can do this by running `@BOT_MENTION jsk sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
