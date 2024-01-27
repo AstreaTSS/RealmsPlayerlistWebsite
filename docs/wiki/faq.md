@@ -8,7 +8,7 @@ description: Frequently asked questions about the Realms Playerlist Bot.
 
 ### What is this bot?
 
-Well, like the [home page](../../index.html) says: it's a bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves. The home page has more information about that, though.
+Well, like the [home page](../index.md) says: it's a bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves. The home page has more information about that, though.
 
 ### How does it work?
 
@@ -58,7 +58,7 @@ Your best bet is to just have two servers, one per Realm. This idea is most like
 
 ### Where can I find information about updates? What's your update policy like?
 
-There are two places you can find updates - the [updates page](../../updates/index.html) and the [support server](https://discord.gg/NSdetwGjpK). The updates page always will contain new features and major adjustments, but the support server will also contain bug fixes and other miscellaneous announcements (IE downtime announcements) that you may find useful.
+There are two places you can find updates - the [updates page](../updates/index.md) and the [support server](https://discord.gg/NSdetwGjpK). The updates page always will contain new features and major adjustments, but the support server will also contain bug fixes and other miscellaneous announcements (IE downtime announcements) that you may find useful.
 
 Unlike some other bots, there are no version numbers or the like associated with each update - the bot has *rolling updates*, and so routinely gets updates as things are [committed to the GitHub repository](https://github.com/AstreaTSS/RealmsPlayerlistBot). Most of these updates, especially if they're minor bugfixes or the like, get quietly pushed out without any announcement - the bot may be down for 1-2 minute intervals sporadically due to this.[^5] Most major features are quietly dropped in these rolling updates and then later announced when I determine them to be stable - this is so I have enough time to gather and fix bugs if needed.
 
