@@ -83,7 +83,7 @@ You'll need:
 Anyways, on with purchasing:
 
 !!! Notes
-    - Payment is locked at $2 a month, and only grants two codes. If you would like to pay more to support me, [you can donate the extra amount to my Ko-Fi](https://ko-fi.com/astreatss). If you want more codes, join the [support server](https://discord.gg/NSdetwGjpK) or use [my email](mailto:discord@astrea.cc) to ask me, and we can discuss how that would work.
+    - Payment is locked at $2 a month, and only grants two codes. If you want to support/pay more to me on top of that, [you can donate the extra amount to my Ko-Fi](https://ko-fi.com/astreatss). If you want more codes, you'll need to buy Premium again (ideally with a different email).
     - You can manage the subscription through the [Premium Dashboard](https://rpldash.astrea.cc/premium/).
       - Old Premium buyers who bought their Premium through Ko-Fi can manage their subscription through [Ko-Fi](https://ko-fi.com).
 
