@@ -82,8 +82,9 @@ extra:
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
   analytics:
-    provider: cloudflare
-    property: !ENV CF_ANALYTICS_TOKEN
+    provider: umami
+    url: !ENV UMAMI_SCRIPT_URL
+    property: !ENV UMAMI_WEBSITE_ID
 
 plugins:
   - search

@@ -4,7 +4,7 @@
 {% set cookies = config.extra.consent.cookies | d({}) %}
 {% if config.extra.analytics %}
   {% if "analytics" not in cookies %}
-    {% set _ = cookies.update({ "analytics": "Cloudflare Analytics" }) %}
+    {% set _ = cookies.update({ "analytics": "Umami Analytics" }) %}
   {% endif %}
 {% endif %}
 {% if config.repo_url and "github.com" in config.repo_url %}
