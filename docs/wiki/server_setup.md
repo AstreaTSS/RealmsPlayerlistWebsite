@@ -18,7 +18,7 @@ There are two methods of linking the bot to your Realm from here, and they depen
 
 === "(RECOMMENDED) Realm Code"
     !!! note "Realm Code Notes"
-        This method is recommended for most users, as it's the easiest to set up. This *requires* a Realm code to use.
+        This method is recommended for most users, as it's the easiest to set up. This *requires* a Realm code and being a Realm operator to use.
 
     Use `/config link-realm` to link your Realm to the server via the Realm code. Make sure to fill in the option for the Realm code (don't set `unlink`)!
 
