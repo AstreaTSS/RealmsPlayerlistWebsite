@@ -6,6 +6,7 @@ categories:
   - Playerlist Premium
 
 description: A new feature has been added to allow you to have a reoccurring leaderboard if you're a Playerlist Premium subscriber.
+comments: true
 ---
 
 # Reoccurring Leaderboard

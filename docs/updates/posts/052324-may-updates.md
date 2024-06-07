@@ -6,6 +6,7 @@ categories:
   - Updates
 
 description: An update post for May 2024, noting performance benefits and feature tweaks.
+comments: true
 ---
 
 # Update Post - May 2024

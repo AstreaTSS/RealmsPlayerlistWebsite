@@ -6,6 +6,7 @@ categories:
   - Features
 
 description: A new way of linking the bot to your Realm has been added, removing the need to use a Realm code if you do not wish to.
+comments: true
 ---
 
 # A New Method of Linking Realms (Beta)

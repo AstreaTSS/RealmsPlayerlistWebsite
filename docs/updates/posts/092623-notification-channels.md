@@ -6,6 +6,7 @@ categories:
   - Features
 
 description: A configuration option has been added to allow you to change the channel that some notifications are sent to.
+comments: true
 ---
 
 # Notification Channels

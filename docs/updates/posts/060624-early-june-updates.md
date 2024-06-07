@@ -6,6 +6,7 @@ categories:
   - Updates
 
 description: An update post for Early June 2024.
+comments: true
 ---
 
 # Update Post - Early June 2024

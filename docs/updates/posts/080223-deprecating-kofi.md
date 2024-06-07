@@ -6,6 +6,7 @@ categories:
   - Playerlist Premium
 
 description: Due to the Ko-Fi method has been increasingly unreliable, new users will not be able to purchase Premium using Ko-Fi anymore.
+comments: true
 ---
 
 # Deprecating the Legacy Ko-Fi Method for Playerlist Premium

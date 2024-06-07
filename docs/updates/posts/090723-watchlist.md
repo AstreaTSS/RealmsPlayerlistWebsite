@@ -6,6 +6,7 @@ categories:
   - Features
 
 description: A new feature has been added, allowing you to get notifications right when specific players joins a Realm.
+comments: true
 ---
 
 # Player Watchlist

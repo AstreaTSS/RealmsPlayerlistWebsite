@@ -6,6 +6,7 @@ categories:
   - Playerlist Premium
 
 description: A new command to export Realm session data has been added for Playerlist Premium subscribers.
+comments: true
 ---
 
 # Exporting Realm Data

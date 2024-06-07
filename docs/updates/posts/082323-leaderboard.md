@@ -6,6 +6,7 @@ categories:
   - Features
 
 description: A new command has been added to allow you to get a ranked list of players by playtime for your Realm.
+comments: true
 ---
 
 # Playtime Leaderboard
