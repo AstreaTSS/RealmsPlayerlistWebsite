@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="mkdocs-custom-plugins",
-    version="0.0.2",
+    version="0.0.3",
     install_requires=[
         "mkdocs-material",
         "pillow",
@@ -15,6 +15,7 @@ setup(
                 "microsoft-verify = "
                 "mkdocs_custom_plugins.microsoft_verify:MicrosoftVerifyPlugin"
             ),
+            "custom-privacy = mkdocs_custom_plugins.privacy.plugin:PrivacyPlugin"
         ]
     },
 )

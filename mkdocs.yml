@@ -91,6 +91,9 @@ extra:
 plugins:
   - search
   - offline
+  - custom-privacy:
+      assets_exclude:
+        - https://giscus.app/*
   - custom-cards:
       cards_layout_options:
         background_color: "#b05bff1E"
