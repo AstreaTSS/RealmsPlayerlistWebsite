@@ -35,7 +35,7 @@ As you use the new `/config link-realm`, you'll notice how the command asks you 
 
 ## Security Check
 
-Also for a while, I've been testing out a new check when linking a Realm via a Realm code/link, and in Zero, it's finally being turned on for everyone. This check will make sure that you are the owner or an operator of the Realm in question before linking it, and will prevent you from linking a Realm you don't have access to.
+Also for a while, I've been testing out a new check *when linking a Realm via a Realm code/link*, and in Zero, it's finally being turned on all of the time. This check will make sure that you are the owner or an operator of the Realm in question before linking it, and will prevent you from linking a Realm you don't have access to.
 
 To do this, the bot has to *temporarily* establish some connection from your Xbox account to your Discord account. There are two methods for this - either you temporarily link your Xbox account a la the direct link/`alternate-link` method, or you DM the Xbox account of the bot a specific code. Both will only store the connection between the two accounts for the command itself, and will not be stored after the command is done. You can verify this by checking the source code yourself [(`/config link-realm` starts here, you may need to hop around the code a bit)](https://github.com/AstreaTSS/RealmsPlayerlistBot/blob/81b5f48126d08239d306ba8bf3cd3b1becabac64/exts/guild_config.py#L386).
 
