@@ -1,11 +1,7 @@
-[data-md-color-primary=deep-purple] {
-  --md-primary-fg-color: #b05bff;
-  --md-primary-fg-color--light: #b05bff;
-  --md-primary-fg-color--dark: #b05bff;
+[data-md-color-primary=purple] {
+  --md-primary-fg-color: #c156e0;
+  --md-primary-fg-color--light: #c156e0;
+  --md-primary-fg-color--dark: #c156e0;
   --md-primary-bg-color: #fff;
   --md-primary-bg-color--light: hsla(0, 0%, 100%, .7);
-}
-
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #a456ed;
 }
