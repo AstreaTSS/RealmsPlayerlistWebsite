@@ -4,7 +4,7 @@ description: The privacy policy for the Realms Playerlist Bot.
 
 # Privacy Policy
 
-*Last updated: 2023-08-23 (YYYY-MM-DD).*
+*Last updated: 2024-06-14 (YYYY-MM-DD).*
 
 This document contains the privacy policy and agreement you accept when adding the below mentioned Bot to a server, or use them as a member of a Server. This document does not supersede any of the terms laid out by Discord.
 
@@ -38,7 +38,8 @@ The following data may be collected and temporarily stored when intentionally pr
 
 -   Server specific configuration settings.
 -   Data and content for the task called.
-  -   When using `/config alternate-link`, Microsoft authentication data is collected in order to link the Bot to a Realm. This data is only stored in memory, and disappears once the task is completed. A Microsoft application is also linked to your account with this command: after the task is completed, you may revoke access to the application at https://account.live.com/consent/Manage.
+  -   When using "Direct Link" method or the "Link Xbox/Microsoft account" security check for `/config link-realm`, Microsoft authentication data is collected in order to link the Bot to a Realm. This data is only stored in memory, and disappears once the task is completed. A Microsoft application is also linked to your account with this command: after the task is completed, you may revoke access to the application at https://account.live.com/consent/Manage.
+  -   Similarly, when using the "DM the bot's account" security check for `/config link-realm`, the Bot will store the fact that your Discord account connected to the Bot's account. This data is stored in memory, and disappears once the task is completed.
 
 #### Automatically Collected
 
