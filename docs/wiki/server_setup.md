@@ -14,23 +14,29 @@ Setting up the bot is easy. You'll just need:
 
 First, invite the bot to your Discord server. If you're using the version hosted by me/AstreaTSS, just [use this link to do so.](https://sh.astrea.cc/inviteplayerlist)
 
-There are two methods of linking the bot to your Realm from here, and they depend on your situation:
+After that, you'll want to link your Realm through `/config link-realm`. You have two methods/options of doing this:
 
-=== "(RECOMMENDED) Realm Code"
-    !!! note "Realm Code Notes"
-        This method is recommended for most users, as it's the easiest to set up. This *requires* a Realm code and being a Realm operator to use.
+=== "Realm Code/Link"
+    !!! note "Realm Code/Link Notes"
+        This method requires a usable Realm code/link, as well as you being an operator (or being the owner) of the Realm being linked. Authentication data is not stored beyond the link process itself, and only the bot's own account is used for actual functionality beyond this process.
 
-    Use `/config link-realm` to link your Realm to the server via the Realm code. Make sure to fill in the option for the Realm code (don't set `unlink`)!
+    Use `/config link-realm` with the "Realm Code/Link" method to link your Realm. This will prompt you for the Realm code/link - once you provide that, then you'll face a security check to prove that you are an operator:
 
-=== "Linking as Realm Owner"
-    !!! note "Linking as Realm Owner Notes"
+    <figure markdown>
+        ![An example of the security check.](security_check.png){ width="650" loading="lazy"}
+    </figure>
+
+    Choose whichever of the options is best for you, and then, once checked, you'll be linked to the Realm!
+
+=== "Linking as Realm Owner (Direct Link)"
+    !!! note "Direct Link Notes"
         This method requires the Realm owner to authenticate the bot with Microsoft/Xbox so the bot can link the Realm you want. Authentication data is not stored beyond the link process itself, and only the bot's own account is used for actual functionality beyond this process.
 
-    Use `/config alternate-link` to link your Realm to the server via the alternate method. This will start a setup process that will guide you through the process of linking the Realm. Make sure to read the prompts carefully!
+    Use `/config link-realm` with the "Direct Link" option. This will start a setup process that will guide you through the process of linking the Realm. Make sure to read the prompts carefully!
 
 From here, the steps are the same for both methods:
-- If you want the autorunning playerlist, make sure the bot is able to read and send messages to the channel, then use `/config playerlist-channel`. Once again, make sure to fill in the option for the channel (don't set `unset`!).
-- Other configuration settings follow a similar pattern, and are usually in `/config` (with the exception of `/watchlist`).
+- If you want the autorunning playerlist, make sure the bot is able to read and send messages to the channel, then use `/config autorunning-playerlist-channel`. Once again, make sure to fill in the option for the channel (don't set `unset`!).
+- Other configuration settings follow a similar pattern, and are usually in `/config` (with the exception of `/watchlist` and `/nicknames`).
 - After that, free to check all of the commands the bot has either through scrolling through the command list or using `/help`!
   - [The features](features.md) talks more in-depth about specific (free) features.
   - [The Premium page](premium.md) talks more about what Premium is, the features it has, and how to get it, if you're interested.

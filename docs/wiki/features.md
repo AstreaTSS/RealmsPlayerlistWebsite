@@ -15,7 +15,7 @@ Of course, this is the main feature of the bot. It's also one of those features 
   <figcaption>The censored space are gamertags of users on the Realm.</figcaption>
 </figure>
 
-The command version (`/playerlist`) allows you to get who was on the Realm up to the last 24 hours (though it defaults to 12 hours). There is also an automatic version that runs every hour in a specified channel (as seen in the picture) - it displays a list going back an hour, every hour. This can be configured through `/config playerlist-channel`.
+The command version (`/playerlist`) allows you to get who was on the Realm up to the last 24 hours (though it defaults to 12 hours). There is also an automatic version that runs every hour in a specified channel (as seen in the picture) - it displays a list going back an hour, every hour. This can be configured through `/config autorunning-playerlist-channel`.
 
 The command can normally only be run by people with Manage Server permissions (can be adjusted the same way you adjust other slash command permissions[^1]) and is not meant to be seen by normal people. However, normal users, by default, can run `/online`, which shows everyone who is on the Realm at that moment:
 
@@ -87,6 +87,19 @@ You can watch up to 3 players at any one time.
     Pings are not enabled for watchlists by default. You can enable them through `/watchlist ping-role`.
 
     By default, watchlist messages are sent to your autorunning/automatic playerlist channel. You can change this through `/watchlist channel` or `/config notification-channel`.
+
+## Nicknames
+
+You can set a nickname for a player with `/nickname set <Xbox gamertag> <nickname>`, and remove it with `/nickname remove`. This will replace this gamertag in most commands with the nickname you set. Feel free to use this however you want!
+
+There is currently a limit of 10 people per server, which you can keep track of through `/nickname list`:
+
+<figure markdown>
+  ![An example of /nickname list. There is one censored player who has been nicknamed to "Test".](nicknames.png)
+</figure>
+
+!!! note
+    This does not affect the *inputting* of names - you'll still need to use their proper gamertag. This only affects the *output* of the bot.
 
 [^1]: https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions
 [^2]:
