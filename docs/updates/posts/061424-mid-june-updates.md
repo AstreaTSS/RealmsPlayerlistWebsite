@@ -31,3 +31,13 @@ All of the features from the [Early June update](060624-early-june-updates.md) a
 ## Speaking of Zero...
 
 Unforunately, people didn't seem to use Playerlist Zero as much as I hoped. As such, I've shut the bot down. RIP, you didn't last long.
+
+## New Colors!
+
+Final announcement - the bot's primary color has shifted! To be more exact, it went from #b05bff to #c156e0. In essence, the color went from a solid purple to a more pinkish-purple (or purplish-pink) - check it out below!
+
+<figure markdown>
+  ![The old /about, with the old color.](https://cdn.astrea.cc/old_about.png){ width="350"}
+  ![The new /about, with the new color.](https://cdn.astrea.cc/new_about.png){ width="350"}
+  <figcaption>An example of /about with the old and new color.</figcaption>
+</figure>

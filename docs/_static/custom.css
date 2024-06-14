@@ -5,3 +5,7 @@
   --md-primary-bg-color: #fff;
   --md-primary-bg-color--light: hsla(0, 0%, 100%, .7);
 }
+
+.md-typeset figure img {
+  display: inline;
+}
