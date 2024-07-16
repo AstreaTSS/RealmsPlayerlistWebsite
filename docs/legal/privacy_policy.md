@@ -4,7 +4,7 @@ description: The privacy policy for the Realms Playerlist Bot.
 
 # Privacy Policy
 
-*Last updated: 2024-06-14 (YYYY-MM-DD).*
+*Last updated: 2024-07-16 (YYYY-MM-DD).*
 
 This document contains the privacy policy and agreement you accept when adding the below mentioned Bot to a server, or use them as a member of a Server. This document does not supersede any of the terms laid out by Discord.
 
@@ -49,6 +49,21 @@ This data may be collected automatically by some Services. This data is used to 
 -   Data relating to users via the Xbox Service, including any Minecraft-related data (e.g. information on when a Player was on a Realm).
 -   For Playerlist Premium, information about the Discord account who purchased it, the subscription ID, and the expiration date of the subscription is stored in the bot itself. This data is not shared with any third party, and is only used to verify the subscription. Stripe handles the payment process itself, including storing payment information - and their privacy policy can be found at https://stripe.com/privacy.
 
+#### Collected on Website
+
+This website optionally uses [Umami Analytics](https://umami.is/) to collect data about the usage of the website. The data collected includes:
+-   The general location of the visitor.
+-   The browser and operating system of the visitor.
+-   The pages visited by the visitor.
+-   The time spent on each page.
+-   The referrer of the visitor.
+
+This information is completely anonymous and cannot be used to identify any individual.
+
+To opt-out of this data collection, you can turn off "Umami Analytics" on the "Manage Settings" page of the consent pop-up, found by either clicking the cookie icon in the footer of any page, or by [clicking here](#__consent).
+
+This website also uses GitHub, but only to the extent of providing accurate statistics about the stars and forks of the repository for this Bot. No personal data is collected by this website, and it can be turned off at the same area.
+
 ## Why We Collect Data
 
 We collect data to facilitate functions of Services, and to provide us with analytical data about the Bot's usage and behavioral patterns. For example, data from the Xbox Services is used in order to track several Players' activity on a Realm to later present them in a human-readable way.
@@ -76,6 +91,10 @@ The Bot uses Redis/a cache in order to store a link between "XUID", the way Xbox
 #### Realm Player Session Activity
 
 The Bot uses Xbox Services in order to track Players on Realms, and stores it per each session - a period of time where a Player was on a Realm. This data is deleted after 31 days after the Player left the Realm for that session, or when the last Server tracking the Realm removes the bot.
+
+#### Website Data
+
+Information gained from this website will be stored in perpetuity.
 
 ## Your Rights to Your Data
 

@@ -72,6 +72,18 @@ There are a variety of options to chose from, from the graph up above to a day-t
 
 Some of the graphs with longer time periods may require voting or purchasing Premium to use.
 
+## Other Statistics
+
+There are other, minor statistics you can get through the `/misc-stats` command. For example, you can get the average playtime of all players on the Realm:
+
+<figure markdown>
+  ![Picture on how /misc-stats average-playtime looks like.](average_playtime.png){ loading="lazy"}
+</figure>
+
+As of right now, there is:
+- `/misc-stats average-playtime` - the average playtime of all players or a specified player on the Realm.
+- `/misc-stats total-playtime` - the total playtime of all players or a specified player on the Realm.
+
 ## Player Watchlist
 
 You get can messages and even pings right when a player joins your Realm through the `/watchlist` commands:
