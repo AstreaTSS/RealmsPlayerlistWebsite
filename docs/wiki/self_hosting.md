@@ -4,7 +4,7 @@ description: Information about how to self-host the Realms Playerlist Bot.
 
 # Self-Hosting
 
-!!! danger "Note about Self-Hosting"
+!!! warning "Note about Self-Hosting"
     Self-hosting is not recommended for most users, being a complicated process that requires a decent bit of technical knowledge. Only do this if you have a personal interest in self-hosting, or if you want to contribute to the bot's development.
     For most people, the public instance of the bot is more than enough - see the [Server Setup Guide](server_setup.md) for more information.
 
@@ -28,37 +28,37 @@ There are two methods of self-hosting the bot: using Docker, or using a manual i
 
 ### Setup 
 
-1. Install [Docker Engine](https://docs.docker.com/engine/install/).
-2. Install [Docker Compose](https://docs.docker.com/compose/install/). This is very likely already installed if you installed Docker Engine.
-3. Create a Discord application through [Discord's developer portal](https://discord.com/developers/applications) if you do not already have one. You will need its bot token later, so make a bot account too.
-4. Clone the bot repo - `git clone https://github.com/AstreaTSS/RealmsPlayerlistBot.git`.
+1. Install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
+2. Create a Discord application through [Discord's developer portal](https://discord.com/developers/applications) if you do not already have one. You will need its bot token later, so make a bot account too.
+3. Clone the bot repo - `git clone https://github.com/AstreaTSS/RealmsPlayerlistBot.git`.
   - You will have to [install Git](https://git-scm.com/downloads) if you do not already have it installed. You can also download the repo as a ZIP file through GitHub, though this will make updating the bot much harder.
-5. Create a copy of the existing `config_example.toml` file and rename it to `config.toml`.
-6. Go into the `config.toml` file and follow the instructions there in the file to fill in as many fields as you can. To note:
+4. Create a copy of the existing `config_example.toml` file and rename it to `config.toml`.
+5. Go into the `config.toml` file and follow the instructions there in the file to fill in as many fields as you can. To note:
    - `DOCKER_MODE` should be set to `true`. You can leave the values of `DB_URL` and `REDIS_URL` as-is - they are only used if you are using a manual installation.
    - You may want to skip the steps about `XBOX_CLIENT_ID` and `XBOX_CLIENT_SECRET` for later if you don't have a Python installation on your PC (if you don't know, you probably don't have Python installed) or don't want to install a package on your host PC.
    - For the emojis:
      - `"RAW EMOJI STRING"` means the emoji's raw string, like `<:emoji:123456789012345678>`. You can get this by typing `\` and then the emoji in Discord.
-     - `"EMOJI ID` means the emoji's ID, like `123456789012345678`. You can get this by doing the same thing as above, but copying the numbers in the middle.
-     - All emojis must be in a server that the bot is in.
-7. Initialize Docker. Run `docker compose build` to build the bot's Docker image.
-8. Make a `.env` file in the root directory with one thing in it: `POSTGRES_PASSWORD="PASSWORD"`. This is used by Docker to set up the database. Of course, replace `PASSWORD` with a password of your choice.
-9. If you skipped setting up the Xbox Live authentication steps, this is the time to do so. You can use `docker compose run bot CMD` (replacing `CMD` with the a command) to run any commands seen in [the guide linked in `config.toml`](https://github.com/Astrea-Stellarium-Labs/elytra-ms#make-an-application) to set it up.
+     - `"EMOJI ID"` means the emoji's ID, like `123456789012345678`. You can get this by doing the same thing as above, but copying the numbers in the middle.
+     - The only requirements for emojis is that they must be custom emojis and they must be usable by the bot; it is recommended you upload the emojis at the developer portal and use them from there.
+6. Initialize Docker. Run `docker compose build` to build the bot's Docker image.
+7. Make a `.env` file in the root directory with one thing in it: `POSTGRES_PASSWORD="PASSWORD"`. This is used by Docker to set up the database. Of course, replace `PASSWORD` with a password of your choice.
+8. If you skipped setting up the Xbox Live authentication steps, this is the time to do so. You can use `docker compose run bot CMD` (replacing `CMD` with the a command) to run any commands seen in [the guide linked in `config.toml`](https://github.com/Astrea-Stellarium-Labs/elytra-ms#make-an-application) to set it up.
   - Remember to rename the generated file to `tokens.json` and set `XBOX_CLIENT_ID` and `XBOX_CLIENT_SECRET` in `config.toml`.
-10. Run `docker compose run --env DB_URL="postgresql://postgres:YOUR_DB_PASSWORD@db:5432/postgres" bot python -m prisma migrate dev` to initialize the database.
-  - Replace `YOUR_DB_PASSWORD` with the password you set in the `.env` file.
-  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive). For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
-11. Run `docker compose up -d` to start the bot. You can use `docker compose logs -f` to view the logs of the bot.
+9. Run `docker compose up -d` to start the bot. You can use `docker compose logs -f` to view the logs of the bot.
   - To sync slash commands, run `@BOT_MENTION debug sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
 
 ### Updating
 1. Pull the latest changes from the repo - `git pull`.
 2. Run `docker compose build` to build the bot's Docker image.
-3. If any new entries were added to `migrations/`, run `docker compose run --env DB_URL="postgresql://postgres:YOUR_DB_PASSWORD@db:5432/postgres" bot python -m prisma migrate dev` to update the database.
-  - Replace `YOUR_DB_PASSWORD` with the password you set in the `.env` file.
-  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive). For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
-4. Run `docker compose up -d` to restart the bot.
+3. Run `docker compose up -d` to restart the bot.
   - To sync new slash commands, run `@BOT_MENTION debug sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
+
+!!! note
+    Migrations, by default, are run automatically when the bot starts up in Docker mode. If you don't want this to happen for whatever reason (you usually do!), you can set a debug flag in `config.toml` (add this to the end of your file):
+    ```toml
+    [DEBUG]
+    RUN_MIGRATIONS_AUTOMATICALLY = false
+    ```
 
 ## Manual Installation
 
@@ -80,11 +80,11 @@ There are two methods of self-hosting the bot: using Docker, or using a manual i
   - `DOCKER_MODE` should be set to `false`. You MUST set `DB_URL` and `REDIS_URL` to the URLs you got earlier.
   - For the emojis:
      - `"RAW EMOJI STRING"` means the emoji's raw string, like `<:emoji:123456789012345678>`. You can get this by typing `\` and then the emoji in Discord.
-     - `"EMOJI ID` means the emoji's ID, like `123456789012345678`. You can get this by doing the same thing as above, but copying the numbers in the middle.
-     - All emojis must be in a server that the bot is in.
+     - `"EMOJI ID"` means the emoji's ID, like `123456789012345678`. You can get this by doing the same thing as above, but copying the numbers in the middle.
+     - The only requirements for emojis is that they must be custom emojis and they must be usable by the bot; it is recommended you upload the emojis at the developer portal and use them from there.
 7. Run `python -m prisma generate` to generate the database models.
-8. Run `python -m prisma migrate dev` to initialize the database. You'll need to set the `DB_URL` variable manually in your terminal for this command.
-  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive). For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
+8. Run `python -m prisma migrate deploy` to initialize the database. You'll need to set the `DB_URL` variable manually in your terminal for this command, likely via `export`.
+  - Depending on your needs, you may want to replace `deploy` with `dev` to perform a destructive migration. For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
 9. Run `python main.py` to start the bot. You may want to use a process manager like `pm2` to keep the bot running in the background.
   - To sync slash commands, run `@BOT_MENTION debug sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
 
@@ -92,14 +92,14 @@ There are two methods of self-hosting the bot: using Docker, or using a manual i
 1. Pull the latest changes from the repo - `git pull`.
 2. Install the latest packages through `pip install -r requirements.txt`.
 3. If the `prisma` package was updated, or `schema.prisma` was modified with new/removed fields, you should run `python -m prisma generate` to generate the database models.
-4. If any new entries were added to `migrations/`, run `python -m prisma migrate dev` to update the database. You'll need to set the `DB_URL` variable manually in your terminal for this command.
-  - Depending on your needs, you may want to replace `dev` with `prod` to use a production migration (usually less destructive). For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
+4. If any new entries were added to `migrations/`, run `python -m prisma migrate deploy` to update the database. You'll need to set the `DB_URL` variable manually in your terminal for this command, likely via `export`.
+  - Depending on your needs, you may want to replace `deploy` with `dev` to perform a destructive migration. For more information, check out [the docs about Prisma Migrate](https://www.prisma.io/docs/orm/prisma-migrate).
 5. Run `python main.py` to restart the bot. You may want to use a process manager like `pm2` to keep the bot running in the background.
   - To sync new slash commands, run `@BOT_MENTION debug sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
 
 ## Notes
-- When first running the bot, you'll need to sync the slash commands to start using the bot. You can do this by running `@BOT_MENTION jsk sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
-  - If you wish to use the developer slash commands, you'll also need to sync to your dev server through `@BOT_MENTION jsk sync DEV_SERVER_ID` (`DEV_SERVER_ID` with the ID of the server you want to sync to).
+- When first running the bot, you'll need to sync the slash commands to start using the bot. You can do this by running `@BOT_MENTION debug sync` in Discord (replace `BOT_MENTION` with the bot's mention, like `@Realms Playerlist Bot`).
+  - If you wish to use the developer slash commands, you'll also need to sync to your dev server through `@BOT_MENTION debug sync DEV_SERVER_ID` (`DEV_SERVER_ID` with the ID of the server you want to sync to).
 - There are a *lot* of developer commands. You can check them out by looking through the [`owner_cmds.py` file](https://github.com/AstreaTSS/RealmsPlayerlistBot/blob/main/exts/owner_cmds.py).
 - While self-hosting the bot, you are subject under the terms of the GNU Affero General Public License license. You can read more about the license [on this page](https://choosealicense.com/licenses/agpl-3.0/) or [on the GNU website](https://www.gnu.org/licenses/agpl-3.0.html).
 - While you can [join my support server](https://discord.gg/NSdetwGjpK) for help, I cannot guarantee I will be able to help you with self-hosting the bot due to how different each setup can be. I will also not help you with setting up Docker, Postgres, Redis, or any other software you need to self-host the bot. I will only help with the bot itself.
