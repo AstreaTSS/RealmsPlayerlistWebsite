@@ -11,7 +11,7 @@ description: Information about Realms Playerlist Premium and how to get it.
 
 ### Live Playerlist
 
-Instead of making the bot send a summary of people on every hour, a **live playerlist** shows who joined and left a Realm every minute, basically making it a live join/leave logger.
+Instead of making the bot send a summary of people on every hour, a **live playerlist** shows who joined and left a Realm every minute, basically making it a live join/leave logger. It can be enabled through `/premium live-playerlist`.
 
 It looks something like this:
 
