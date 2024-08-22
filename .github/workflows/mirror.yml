@@ -11,6 +11,6 @@ jobs:
           fetch-depth: 0
       - uses: yesolutions/mirror-action@master
         with:
-          REMOTE: 'https://codeberg.org/Astrea/RealmsPlayerlistBot.git'
+          REMOTE: 'https://codeberg.org/Astrea/RealmsPlayerlistWebsite.git'
           GIT_USERNAME: Astrea
           GIT_PASSWORD: '${{ secrets.CODEBERG_PASSWORD }}'
