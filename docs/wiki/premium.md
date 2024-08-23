@@ -51,7 +51,7 @@ This is also available as a toggle to non-Premium users of `/online` (and only `
 
 ### Reoccurring Leaderboard
 
-Instead of having to manually run `/leaderboard` every time you want to see the leaderboard, you can have it automatically run every every week, every other week, or every month in a specified channel. This can be configured through `/premium reoccurring-leaderboard`.
+Instead of having to manually run `/leaderboard` every time you want to see the leaderboard, you can have it automatically run every day, every week, every other week, or every month in a specified channel. This can be configured through `/premium reoccurring-leaderboard`.
 
 <figure markdown>
   ![Picture on how the reoccurring leaderboard looks when sent.](reoccurring_lb.png){ width="375" loading="lazy"}

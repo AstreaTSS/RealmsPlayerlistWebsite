@@ -83,6 +83,7 @@ There are other, minor statistics you can get through the `/misc-stats` command.
 As of right now, there is:
 - `/misc-stats average-playtime` - the average playtime of all players or a specified player on the Realm.
 - `/misc-stats total-playtime` - the total playtime of all players or a specified player on the Realm.
+- `/misc-stats longest-session` - the longest session of all players or a specified player on the Realm.
 
 ## Player Watchlist
 
