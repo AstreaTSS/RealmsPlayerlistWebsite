@@ -87,6 +87,13 @@ Anyways, on with purchasing:
     - You can manage the subscription through the [Premium Dashboard](https://rpldash.astrea.cc/premium/).
       - Old Premium buyers who bought their Premium through Ko-Fi can manage their subscription through [Ko-Fi](https://ko-fi.com).
 
+!!! warning
+    You can buy Premium through Discord using the [bot's store](https://discord.com/application-directory/725483868777611275/store) and ignore the rest of these steps (since everything will be managed through Discord). However:
+    - You will only get Premium for one server instead of two. This is a limitation of Discord's store.
+    - Discord's store may be more expensive on iOS and some Android devices due to the platform's cut.
+    - Issues that arise from buying through Discord's store will be harder to resolve, as I have less control over the process.
+    - Finally, Discord takes a cut of the payment, so I get less money from it.
+
 1. Head over to the [Premium Dashboard](https://rpldash.astrea.cc/premium/). *This page is where you can get and manage Premium.*
     
 2. Click the "Purchase Premium" button. It should ask you to authorize the Realms Playerlist Bot to view basic details for your account - this is just to link the upcoming purchase to you.
