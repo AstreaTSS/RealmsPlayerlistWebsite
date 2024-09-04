@@ -14,7 +14,7 @@ comments: true
 Hello! I've been working on the bot over the past week or two, and already have a few things to show for it.
 **All of these changes are on Realm Playerlist Zero only for now, and will come to the main bot after some time.**
 <!-- more -->
-As a reminder, Zero is the new beta testing bot that will receive features faster than the main bot, but may be less stable. You can check out [the last update post](052324-may-updates.md#realms-playerlist-zero) for more information on it.
+As a reminder, Zero is the new beta testing bot that will receive features faster than the main bot, but may be less stable. You can check out [the last update post](20240523-may-updates.md#realms-playerlist-zero) for more information on it.
 
 ## Nicknames
 

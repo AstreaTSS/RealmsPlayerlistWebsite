@@ -17,7 +17,7 @@ Hello! There isn't as much this time around, but there's still things to announc
 
 ## Everything from Early June is Now Live on the Main Bot
 
-All of the features from the [Early June update](060624-early-june-updates.md) are now live on the main bot. This includes:
+All of the features from the [Early June update](20240606-early-june-updates.md) are now live on the main bot. This includes:
 - Nicknames! You can now set nicknames for players, and they'll be used in most commands.
 - Merging the link Realm commands. There's now only one command to link a Realm, and it'll ask you which method you want to use.
 - The new security check for linking Realms via Realm code/link. This check will make sure you're an operator/owner of the Realm before linking it.
