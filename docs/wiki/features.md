@@ -114,7 +114,7 @@ There is currently a limit of 10 people per server, which you can keep track of 
 !!! note
     This does not affect the *inputting* of names - you'll still need to use their proper gamertag. This only affects the *output* of the bot.
 
-[^1]: https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions
+[^1]: https://web.archive.org/web/20240519053816/https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions - original article was deleted, but it still holds up.
 [^2]:
     As the name of the feature suggests, it detects when your Realm goes *offline* - more accurately, it detects when the bot can't detect the Realm.
     This does mean it can trigger if the bot is accidentally kicked or banned, or just because Minecraft decided to freak out for a few minutes.
