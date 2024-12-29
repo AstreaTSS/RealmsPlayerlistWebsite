@@ -1,6 +1,6 @@
 site_name: Realms Playerlist Bot
 site_description: "A bot that helps out owners of Minecraft: Bedrock Edition Realms by showing various statistics related to player join/leaves."
-site_url: https://rpl.astrea.cc
+site_url: https://playerlist.astrea.cc
 theme:
   name: material
   custom_dir: overrides
