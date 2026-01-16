@@ -91,15 +91,13 @@ extra:
 plugins:
   - search
   - offline
-  - custom-privacy:
+  - privacy:
       assets_exclude:
-        - https://giscus.app/*
-  - custom-cards:
+        - giscus.app/*
+  - social:
       cards_layout_options:
         background_color: "#b05bff1E"
-        background_image: _static/social_card_bg.png
-  - microsoft-verify:
-      id: !ENV [MICROSOFT_APPLICATION_ID, ""]
+        background_image: docs/_static/social_card_bg.png
   - autorefs
   - autolinks
   - awesome-pages
