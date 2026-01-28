@@ -35,7 +35,7 @@ After that, you'll want to link your Realm through `/config link-realm`. You hav
     Use `/config link-realm` with the "Direct Link" option. This will start a setup process that will guide you through the process of linking the Realm. Make sure to read the prompts carefully!
 
 From here, the steps are the same for both methods:
-- If you want the autorunning playerlist, make sure the bot is able to read and send messages to the channel, then use `/config autorunning-playerlist-channel`. Once again, make sure to fill in the option for the channel (don't set `unset`!).
+- If you want the autorunning playerlist, make sure the bot is able to read and send messages to the channel, then use `/config autorunning-playerlist-channel set`.
 - Other configuration settings follow a similar pattern, and are usually in `/config` (with the exception of `/watchlist` and `/nicknames`).
 - After that, free to check all of the commands the bot has either through scrolling through the command list or using `/help`!
   - [The features](features.md) talks more in-depth about specific (free) features.
