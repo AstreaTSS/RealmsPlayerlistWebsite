@@ -12,7 +12,10 @@ Setting up the bot is easy. You'll just need:
 
 ## Steps
 
-First, invite the bot to your Discord server. If you're using the version hosted by me/AstreaTSS, just [use this link to do so.](https://sh.astrea.cc/inviteplayerlist)
+First, invite the bot to your Discord server. If you're using the version hosted by me/AstreaTSS, just use this link to do so.
+
+!!! danger
+    **The bot is shutting down on December 20th, 2026. The link has been removed. Please use a different bot.**
 
 After that, you'll want to link your Realm through `/config link-realm`. You have two methods/options of doing this:
 
@@ -47,7 +50,6 @@ You can view your configuration at any time via `/config info`.
 
 ## Invite Link
 
-If you just want the invite link for the version hosted by me, you can use:
+!!! danger
+    **The bot is shutting down on December 20th, 2026. The links have been removed. Please use a different bot.**
 
-- https://sh.astrea.cc/inviteplayerlist
-- If you don't trust that link (it's just a shortened link for the following, but still), you can use the raw Discord link: https://discord.com/api/oauth2/authorize?client_id=725483868777611275&permissions=309238025280&scope=applications.commands%20bot

@@ -49,7 +49,6 @@ theme:
     - content.tabs.link
     - content.tooltips
     - header.autohide
-    - announce.dismiss
 
 extra_css:
   - _static/custom.css

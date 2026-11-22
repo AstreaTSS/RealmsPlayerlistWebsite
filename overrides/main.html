@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block announce %}
+<div class="admonition danger"> <p class="admonition-title">Danger</p> <p><strong>The bot is shutting down on December 20<sup>th</sup>, 2026. Please switch to a different bot by then.</strong></p> </div>
+{% endblock %}
+
 <!-- Site title -->
 {% block htmltitle %}
 {% if page.is_homepage %}
